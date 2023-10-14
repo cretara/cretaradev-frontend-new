@@ -1,5 +1,9 @@
 {
   "home": {
     "test": "test-it"
+  },
+  "bio": {
+    "header": "Salve a tutti, sono l'Ing. Pier Daniele Cretara!",
+    "welcome": "Sono lieto di darti il benvenuto nel mio portfolio, dove puoi esplorare i miei 17 anni di esperienza come sviluppatore full-stack specializzato in applicazioni web e mobile per pubbliche amministrazioni ed aziende di medio-grandi dimensioni. Durante la mia carriera, ho lavorato su progetti stimolanti che hanno sfidato la mia creatività e la mia capacità di risolvere problemi. Questo portfolio è una finestra sulla mia passione per la tecnologia e l'innovazione, nonché una dimostrazione dei risultati che ho ottenuto.\n\nSono profondamente ammiratore delle tecnologie, dei framework e delle piattaforme open source che hanno alimentato molte delle mie creazioni. L'ecosistema open source rappresenta una comunità globale di menti brillanti che collaborano per rendere il mondo digitale un luogo migliore. Il mio lavoro è stato profondamente influenzato da questa filosofia di condivisione e cooperazione, e cerco costantemente di restituire a questa comunità attraverso il mio contributo personale."
   }
 }
