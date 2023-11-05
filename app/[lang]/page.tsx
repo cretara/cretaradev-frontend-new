@@ -1,17 +1,18 @@
-import {Locale} from "@/i18n-config";
-import {getDictionary} from "@/get-dictionary";
+import { Inter } from "@next/font/google";
+import Link from "next/link";
 
-export default async function IndexCretara({
-                                               params: {lang},
-                                           }: {
-    params: { lang: Locale }
-}) {
-    const dictionary = await getDictionary(lang)
+const inter = Inter({ subsets: ["latin"] });
 
-    return (
-        <main>
-            <h1>This is Cretara.dev site</h1>
-            <h2>{dictionary.home.test}</h2>
-        </main>
-    )
+export default async function IndexCretara() {
+  return (
+    <div id="main">
+      <main className={inter.className}>
+        <h1>
+          <Link href={"en/bio"}>
+            This is Cretara.dev site, go to bio section
+          </Link>
+        </h1>
+      </main>
+    </div>
+  );
 }
