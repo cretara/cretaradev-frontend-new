@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body>{children}</body>
+      <body className="bg-gradient-to-br bg-blue-800">{children}</body>
     </html>
   );
 }

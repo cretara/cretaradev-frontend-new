@@ -5,10 +5,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default async function IndexCretara() {
   return (
-    <main className={inter.className}>
-      <h1>
-        <Link href={"en/bio"}>This is Cretara.dev site, go to bio section</Link>
-      </h1>
-    </main>
+    <div id="main">
+      <main className={inter.className}>
+        <h1>
+          <Link href={"en/bio"}>
+            This is Cretara.dev site, go to bio section
+          </Link>
+        </h1>
+      </main>
+    </div>
   );
 }
