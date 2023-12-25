@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   params,
-}: {
+}: Readonly<{
   children: React.ReactNode;
   params: { lang: string };
-}) {
+}>) {
   return (
     <html lang={params.lang}>
       <body className="bg-gradient-to-br bg-blue-800">{children}</body>
