@@ -1,6 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import React from "react";
+import Header from "@/components/Header";
+import { Providers } from "@/app/providers";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Cretara.dev",
@@ -13,8 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="bg-gradient-to-br bg-blue-900">{children}</body>
+    <html suppressHydrationWarning lang="en">
+      <head title={"Cretaradev"} />
+
+      <body className="dark:bg-black">
+        <Providers>
+          <Header />
+          {children}
+          <ScrollToTop />
+        </Providers>
+      </body>
     </html>
   );
 }
