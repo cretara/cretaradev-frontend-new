@@ -25,7 +25,6 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
-  // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index: SetStateAction<number>) => {
     if (openIndex === index) {
@@ -54,14 +53,14 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo.png"
                   alt="logo"
                   width={140}
                   height={30}
@@ -113,8 +112,9 @@ const Header = () => {
                           </Link>
                         ) : (
                           <>
-                            <a
+                            <button
                               onClick={() => handleSubmenu(index)}
+                              onKeyUp={() => handleSubmenu(index)}
                               className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
                             >
                               {menuItem.title}
@@ -126,7 +126,7 @@ const Header = () => {
                                   />
                                 </svg>
                               </span>
-                            </a>
+                            </button>
                             <div
                               className={`submenu relative top-full left-0 rounded-md bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"

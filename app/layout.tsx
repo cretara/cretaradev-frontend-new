@@ -7,7 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Cretara.dev",
-  description: "Cretara.dev bio, resume, portfolio, blog site",
+  description: "Cretara.dev about, blog, resume, portfolio site",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head title={"Cretaradev"} />
 
-      <body className="dark:bg-black">
+      <body>
         <Providers>
           <Header />
           {children}
