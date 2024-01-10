@@ -18,9 +18,9 @@ const Body = () => {
                 I'm delighted to welcome you to my personal portfolio site,
                 where you can explore more than 17 years of experience as a
                 full-stack developer specializing in web and mobile applications
-                for public administrations and medium to large-sized businesses.{" "}
+                for public administrations and medium to large-sized businesses.
               </p>
-              <p>
+              <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                 Throughout my career, I've worked on challenging projects that
                 have tested my creativity and problem-solving abilities. This
                 site is a window into my passion for technology and innovation,
@@ -31,7 +31,7 @@ const Body = () => {
                 brilliant minds collaborating to make the digital world a better
                 place and a natural community for all developers.
               </p>
-              <p>
+              <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                 My work has been profoundly influenced by this philosophy of
                 sharing and cooperation, and I continually seek to give back to
                 this community through my personal contributions.

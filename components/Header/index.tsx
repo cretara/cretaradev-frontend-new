@@ -14,6 +14,7 @@ const Header = () => {
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
+
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
       setSticky(true);
@@ -37,14 +38,14 @@ const Header = () => {
   return (
     <div id={"menu"}>
       <header
-        className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
+        className={`header top-0 left-0 z-40 flex-1 w-full items-center bg-transparent ${
           sticky
             ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
             : "absolute"
         }`}
       >
-        <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
+        <div id={"header"}>
+          <div className="relative w-full -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
