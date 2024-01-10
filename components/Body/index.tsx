@@ -12,13 +12,14 @@ const Body = () => {
               data-wow-delay=".2s"
             >
               <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Cretara.dev site
+                Cretara.dev portfolio site
               </h1>
               <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                 I'm delighted to welcome you to my personal portfolio site,
                 where you can explore more than 17 years of experience as a
-                full-stack developer specializing in web and mobile applications
-                for public administrations and medium to large-sized businesses.
+                full-stack engineer, architect and developer specializing in web
+                and mobile applications for public administrations and medium to
+                large-sized businesses.
               </p>
               <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                 Throughout my career, I've worked on challenging projects that
