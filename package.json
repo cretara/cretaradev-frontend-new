@@ -1,6 +1,6 @@
 {
   "name": "cretaradev-frontend-new",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,6 @@
     "@types/react": "18.2.78",
     "@types/react-dom": "18.2.25",
     "autoprefixer": "10.4.19",
-    "eslint": "9.0.0",
     "eslint-config-next": "^14.2.1",
     "negotiator": "^0.6.3",
     "next": "^14.2.30",
@@ -25,16 +24,16 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "3.4.3",
-    "typescript": "5.4.5"
+    "typescript": "5.8.3"
   },
   "devDependencies": {
-    "@types/negotiator": "^0.6.3",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
-    "eslint-config-standard-with-typescript": "^43.0.0",
+    "@types/negotiator": "^0.6.4",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "eslint": "^8.57.1",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-n": "17.2.1",
-    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-n": "^17.20.0",
+    "eslint-plugin-promise": "^7.2.1",
     "standardx": "7.0.0"
   }
 }
