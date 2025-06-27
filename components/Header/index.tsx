@@ -40,7 +40,7 @@ const Header = () => {
       <header
         className={`header top-0 left-0 z-40 flex-1 w-full items-center bg-transparent ${
           sticky
-            ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
+            ? "fixed! z-9999! bg-white! !bg-opacity-80 shadow-sticky backdrop-blur-xs transition! dark:!bg-primary dark:!bg-opacity-20"
             : "absolute"
         }`}
       >
@@ -95,7 +95,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -137,7 +137,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path ?? ""}
                                   key={submenuItem.id}
-                                  className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                                  className="block rounded-sm py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>
