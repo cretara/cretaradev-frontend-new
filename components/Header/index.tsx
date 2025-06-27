@@ -59,6 +59,7 @@ const Header = () => {
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
+                  suppressHydrationWarning={true}
                 />
                 <Image
                   src="/images/logo.png"
@@ -66,6 +67,7 @@ const Header = () => {
                   width={140}
                   height={30}
                   className="hidden w-full dark:block"
+                  suppressHydrationWarning={true}
                 />
               </Link>
             </div>
@@ -75,7 +77,7 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden cursor-pointer"
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
@@ -107,7 +109,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-black lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {menuItem.title}
                           </Link>
