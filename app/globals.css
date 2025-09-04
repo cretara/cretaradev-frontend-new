@@ -1,19 +1,10 @@
 @import 'tailwindcss';
 
-@theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
-}
-
-@theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
+/* Theme CSS Custom Properties */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 /*
@@ -67,16 +58,33 @@
 }
 
 body {
-    color: rgb(75 85 99);
     scroll-behavior: smooth;
-    background-color: white;
+    background-color: #ffffff !important;
+    color: #374151 !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: white;
-        background-color: rgb(15 23 42);
-    }
+.dark body {
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+}
+
+/* Ensure main sections have proper backgrounds */
+#home {
+    background-color: transparent;
+}
+
+.dark #home {
+    background-color: transparent;
+}
+
+/* Force background colors for main containers */
+html {
+    background-color: #ffffff !important;
+}
+
+.dark html {
+    background-color: #0f172a !important;
 }
 
 /* Custom portfolio styles */
@@ -94,6 +102,13 @@ body {
     --bg-color-dark: #0F172A;
     --dark: #1E293B;
     --gray-dark: #1F2937;
+}
+
+/* Dark mode overrides */
+.dark {
+    --body-color: #CBD5E1;
+    --gray-light: #1E293B;
+    --bg-color-dark: #0F172A;
 }
 
 /* Utility classes */
@@ -262,4 +277,55 @@ html {
     h3 {
         font-size: 1.5rem !important;
     }
+}
+
+/* Additional Tailwind utility classes for theme support */
+@layer components {
+  .bg-gray-2 {
+    background-color: #F1F5F9;
+  }
+  
+  .dark .bg-gray-2 {
+    background-color: #334155;
+  }
+  
+  .bg-dark-bg {
+    background-color: #0F172A;
+  }
+  
+  .dark .bg-dark-bg {
+    background-color: #1E293B;
+  }
+  
+  .bg-bg-color-dark {
+    background-color: var(--bg-color-dark);
+  }
+  
+  .dark .bg-bg-color-dark {
+    background-color: #0F172A;
+  }
+  
+  .text-dark {
+    color: #1E293B;
+  }
+  
+  .dark .text-dark {
+    color: #F8FAFC;
+  }
+  
+  .bg-dark {
+    background-color: #1E293B;
+  }
+  
+  .dark .bg-dark {
+    background-color: #334155;
+  }
+  
+  .bg-gray-light {
+    background-color: var(--gray-light);
+  }
+  
+  .dark .bg-gray-light {
+    background-color: #1E293B;
+  }
 }

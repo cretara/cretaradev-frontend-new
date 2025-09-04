@@ -18,9 +18,41 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head title={"Cretaradev"} />
+      <head title={"Cretaradev"}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const stored = localStorage.getItem('cretaradev-theme');
+                  let theme = stored;
+                  
+                  if (!stored || stored === 'system') {
+                    // Use system preference
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  }
+                  
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.style.colorScheme = 'light';
+                  }
+                } catch (e) {
+                  // Fallback to system preference
+                  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.colorScheme = 'dark';
+                  }
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
 
-      <body>
+      <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-slate-100 transition-colors duration-300 min-h-screen">
         <Providers>
           <Header />
           {children}

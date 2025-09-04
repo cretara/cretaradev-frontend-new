@@ -1,19 +1,57 @@
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 const ThemeToggler = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="h-9 w-9 md:h-14 md:w-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse" />
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
+
+  const toggleTheme = () => {
+    // If currently on system theme, switch to opposite of current appearance
+    if (theme === "system") {
+      setTheme(isDark ? "light" : "dark");
+    } else {
+      // If on a specific theme, switch to the opposite
+      setTheme(isDark ? "light" : "dark");
+    }
+  };
+
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="bg-gray-2 dark:bg-dark-bg flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-black dark:text-white md:h-14 md:w-14"
-      suppressHydrationWarning={true}
+      onClick={toggleTheme}
+      className="
+        bg-gray-100 dark:bg-slate-700 
+        hover:bg-gray-200 dark:hover:bg-slate-600
+        flex h-9 w-9 cursor-pointer items-center justify-center 
+        rounded-full text-gray-900 dark:text-slate-100 
+        md:h-14 md:w-14
+        transition-all duration-300 ease-in-out
+        shadow-sm hover:shadow-md
+        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+        dark:focus:ring-offset-slate-800
+        border border-gray-200 dark:border-slate-600
+      "
+      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      title={`Current: ${theme} (${resolvedTheme})`}
     >
-      {resolvedTheme === "dark" ? (
+      {isDark ? (
           <svg
               viewBox="0 0 25 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 md:h-6 md:w-6"
+              className="h-5 w-5 md:h-6 md:w-6 transition-transform duration-300 hover:rotate-12"
           >
             {/* Sun icon */}
             <circle cx="12.5" cy="12" r="5" stroke="currentColor" strokeWidth="2" />
@@ -31,7 +69,7 @@ const ThemeToggler = () => {
       ) : (
           <svg
               viewBox="0 0 23 23"
-              className="h-5 w-5 md:h-6 md:w-6"
+              className="h-5 w-5 md:h-6 md:w-6 transition-transform duration-300 hover:-rotate-12"
               fill="none"
           >
             {/* Moon icon */}
