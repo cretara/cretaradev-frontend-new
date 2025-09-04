@@ -2,9 +2,13 @@
 
 /* Theme CSS Custom Properties */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    /* Increase light theme contrast for Tailwind v4 gray tokens */
+    /* This safely bumps common paragraph/link grays without touching headings */
+    --color-gray-500: #475569; /* slate-600: darker than default gray-500 */
+    --color-gray-600: #374151; /* gray-700 for stronger contrast on white */
 }
 
 /*
@@ -60,7 +64,7 @@
 body {
     scroll-behavior: smooth;
     background-color: #ffffff !important;
-    color: #374151 !important;
+    color: #374151 !important; /* gray-700: AA on white for paragraphs */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -97,7 +101,7 @@ html {
 :root {
     --primary: #4F46E5;
     --primary-hover: #4338CA;
-    --body-color: #637381;
+    --body-color: #374151; /* gray-700 for readable body copy on white */
     --gray-light: #F7F8FC;
     --bg-color-dark: #0F172A;
     --dark: #1E293B;
@@ -219,6 +223,14 @@ html {
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
 }
 
+/* Improve default link readability in light mode */
+a {
+    color: inherit;
+}
+.dark a {
+    color: inherit;
+}
+
 /* Portfolio grid animations */
 .portfolio-item {
     transition: all 0.3s ease-in-out;
@@ -306,7 +318,7 @@ html {
   }
   
   .text-dark {
-    color: #1E293B;
+    color: #1F2937; /* Slightly darker for better contrast */
   }
   
   .dark .text-dark {

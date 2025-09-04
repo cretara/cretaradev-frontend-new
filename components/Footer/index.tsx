@@ -24,11 +24,11 @@ const Footer = () => {
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
                   Full-stack engineer with 17+ years of experience creating innovative solutions for enterprise and public sector clients. Passionate about technology and open-source development.
                 </p>
-                <div className="flex items-center">
+        <div className="flex items-center">
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+          className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="9"
@@ -42,7 +42,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="19"
@@ -56,7 +56,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="18"
@@ -70,7 +70,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="17"

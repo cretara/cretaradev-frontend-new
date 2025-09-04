@@ -23,8 +23,9 @@ const Header = () => {
     }
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-  });
+    window.addEventListener("scroll", handleStickyNavbar, { passive: true });
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index: SetStateAction<number>) => {
@@ -38,14 +39,14 @@ const Header = () => {
   return (
     <div id={"menu"}>
       <header
-        className={`header top-0 left-0 z-40 flex-1 w-full items-center bg-transparent ${
+        className={`header top-0 left-0 z-40 flex-1 w-full items-center ${
           sticky
-            ? "fixed! z-9999! !bg-opacity-80 shadow-sticky backdrop-blur-xs transition! dark:!bg-primary dark:!bg-opacity-20"
-            : "absolute"
+            ? "fixed z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm transition-all duration-300 dark:bg-slate-900/80 dark:border-slate-700/60"
+            : "absolute bg-transparent"
         }`}
       >
-        <div id={"header"}>
-          <div className="relative w-full -mx-4 flex items-center justify-between">
+        <div id={"header"} className="container">
+          <div className="relative w-full flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
@@ -97,7 +98,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -109,7 +110,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`flex py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {menuItem.title}
                           </Link>
@@ -118,7 +119,7 @@ const Header = () => {
                             <button
                               onClick={() => handleSubmenu(index)}
                               onKeyUp={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                              className="flex cursor-pointer items-center justify-between py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -139,7 +140,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path ?? ""}
                                   key={submenuItem.id}
-                                  className="block rounded-sm py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
+                                  className="block rounded-sm py-2.5 text-sm text-gray-800 hover:text-primary dark:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
                                 </Link>

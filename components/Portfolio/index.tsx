@@ -82,7 +82,7 @@ const Portfolio = () => {
               <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[40px]">
                 Featured Projects
               </h2>
-              <p className="text-base font-medium leading-relaxed text-body-color">
+              <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300">
                 A showcase of innovative solutions I've developed for various industries and client needs.
               </p>
             </div>
@@ -94,7 +94,7 @@ const Portfolio = () => {
           {categories.map((category, index) => (
             <button
               key={index}
-              className="mb-3 mr-3 rounded-md bg-white px-4 py-2 text-base font-medium text-body-color shadow-one duration-300 hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:shadow-three dark:hover:bg-primary"
+              className="mb-3 mr-3 rounded-md bg-gray-100 px-4 py-2 text-base font-medium text-gray-700 shadow-one duration-300 hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:shadow-three dark:hover:bg-primary border border-gray-200 dark:border-gray-600"
             >
               {category}
             </button>
@@ -145,7 +145,7 @@ const Portfolio = () => {
                   <h3 className="mb-4 text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary">
                     {project.title}
                   </h3>
-                  <p className="mb-4 text-base font-medium text-body-color">
+                  <p className="mb-4 text-base font-medium text-gray-600 dark:text-gray-300">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">

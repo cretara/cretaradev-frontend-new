@@ -2,7 +2,6 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 
 const Body = () => {
@@ -22,7 +21,7 @@ const Body = () => {
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Full-Stack Engineer & Architect
                 </h1>
-                <p className="mb-12 text-base font-medium leading-relaxed! text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
+                <p className="mb-12 text-base font-medium leading-relaxed! text-gray-600 dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                   Welcome to my portfolio. I'm a passionate full-stack engineer with over 17 years of experience creating scalable web and mobile applications for public administrations and enterprise clients.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -34,7 +33,7 @@ const Body = () => {
                   </a>
                   <a
                     href="#contact"
-                    className="rounded-md bg-black/20 px-8 py-4 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
+                    className="rounded-md bg-gray-200 px-8 py-4 text-base font-semibold text-gray-900 duration-300 ease-in-out hover:bg-gray-300 dark:bg-white/20 dark:text-white dark:hover:bg-white/30 border border-gray-300 dark:border-white/30"
                   >
                     Get In Touch
                   </a>
@@ -49,7 +48,6 @@ const Body = () => {
       <Skills />
       <Portfolio />
       <Experience />
-      <Testimonials />
       <Contact />
     </>
   );

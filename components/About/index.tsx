@@ -8,7 +8,7 @@ const About = () => {
       className="bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
     >
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        <div className="border-b border-gray-200 pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <div
@@ -42,7 +42,7 @@ const About = () => {
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                     Full-Stack Engineering Excellence
                   </h3>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
                     With over 17 years of experience in software development, I specialize in creating scalable web and mobile applications for public administrations and enterprise clients.
                   </p>
                 </div>
@@ -50,7 +50,7 @@ const About = () => {
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                     Architecture & Innovation
                   </h3>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
                     I design robust system architectures and implement cutting-edge technologies to solve complex business challenges while maintaining high code quality and performance standards.
                   </p>
                 </div>
@@ -58,7 +58,7 @@ const About = () => {
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                     Open Source Advocate
                   </h3>
-                  <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                  <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
                     Passionate contributor to the open-source ecosystem, believing in the power of collaborative development and knowledge sharing to advance the technology community.
                   </p>
                 </div>

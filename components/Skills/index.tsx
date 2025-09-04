@@ -60,7 +60,7 @@ const Skills = () => {
               <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[40px]">
                 Skills & Technologies
               </h2>
-              <p className="text-base font-medium leading-relaxed text-body-color">
+              <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300">
                 A comprehensive overview of the technologies and methodologies I've mastered throughout my career.
               </p>
             </div>
@@ -84,7 +84,7 @@ const Skills = () => {
                         <span className="text-base font-medium text-dark dark:text-white">
                           {skill.name}
                         </span>
-                        <span className="text-sm font-medium text-body-color">
+                        <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
                           {skill.level}%
                         </span>
                       </div>
