@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Theme CSS Custom Properties */
 :root {
     --foreground-rgb: 0, 0, 0;
@@ -9,6 +11,13 @@
     /* This safely bumps common paragraph/link grays without touching headings */
     --color-gray-500: #475569; /* slate-600: darker than default gray-500 */
     --color-gray-600: #374151; /* gray-700 for stronger contrast on white */
+    --primary: #4F46E5;
+    --primary-hover: #4338CA;
+    --body-color: #374151; /* gray-700 for readable body copy on white */
+    --gray-light: #F7F8FC;
+    --bg-color-dark: #0F172A;
+    --dark: #1E293B;
+    --gray-dark: #1F2937;
 }
 
 /*
@@ -45,12 +54,6 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
-}
-
-:root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,7 +76,6 @@ body {
     color: #f1f5f9 !important;
 }
 
-/* Ensure main sections have proper backgrounds */
 #home {
     background-color: transparent;
 }
@@ -82,9 +84,9 @@ body {
     background-color: transparent;
 }
 
-/* Force background colors for main containers */
 html {
     background-color: #ffffff !important;
+    scroll-behavior: smooth;
 }
 
 .dark html {
@@ -95,17 +97,6 @@ html {
 .wow {
     opacity: 1;
     transition: all 0.6s ease-in-out;
-}
-
-/* Primary color scheme */
-:root {
-    --primary: #4F46E5;
-    --primary-hover: #4338CA;
-    --body-color: #374151; /* gray-700 for readable body copy on white */
-    --gray-light: #F7F8FC;
-    --bg-color-dark: #0F172A;
-    --dark: #1E293B;
-    --gray-dark: #1F2937;
 }
 
 /* Dark mode overrides */
@@ -150,27 +141,27 @@ html {
 
 /* Shadow utilities */
 .shadow-one {
-    box-shadow: 0px 2px 3px rgba(7, 7, 77, 0.05);
+    box-shadow: 0 2px 3px rgba(7, 7, 77, 0.05);
 }
 
 .shadow-two {
-    box-shadow: 0px 5px 10px rgba(4, 10, 34, 0.15);
+    box-shadow: 0 5px 10px rgba(4, 10, 34, 0.15);
 }
 
 .shadow-three {
-    box-shadow: 0px 5px 15px rgba(34, 34, 34, 0.1);
+    box-shadow: 0 5px 15px rgba(34, 34, 34, 0.1);
 }
 
 .shadow-submit {
-    box-shadow: 0px 5px 20px rgba(4, 10, 34, 0.1);
+    box-shadow: 0 5px 20px rgba(4, 10, 34, 0.1);
 }
 
 .shadow-submit-dark {
-    box-shadow: 0px 5px 20px rgba(4, 10, 34, 0.1);
+    box-shadow: 0 5px 20px rgba(4, 10, 34, 0.1);
 }
 
 .drop-shadow-three {
-    filter: drop-shadow(0px 5px 15px rgba(34, 34, 34, 0.1));
+    filter: drop-shadow(0 5px 15px rgba(34, 34, 34, 0.1));
 }
 
 /* Container styles */
@@ -203,11 +194,6 @@ html {
         max-width: 100%;
         padding: 0 15px;
     }
-}
-
-/* Smooth scrolling for anchor links */
-html {
-    scroll-behavior: smooth;
 }
 
 /* Custom button hover effects */
@@ -262,7 +248,7 @@ a {
 
 @keyframes progressAnimation {
     from {
-        width: 0%;
+        width: 0;
     }
 }
 

@@ -12,6 +12,8 @@ export function Providers({
       enableSystem={true} 
       defaultTheme="system"
       storageKey="cretaradev-theme"
+      disableTransitionOnChange={false}
+      enableColorScheme={false}
     >
       {children}
     </ThemeProvider>

@@ -8,6 +8,8 @@ import menuData from "./menuData";
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
@@ -16,13 +18,19 @@ const Header = () => {
   const [sticky, setSticky] = useState(false);
 
   const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
+    if (typeof window !== 'undefined' && window.scrollY >= 80) {
       setSticky(true);
     } else {
       setSticky(false);
     }
   };
+
   useEffect(() => {
+    setMounted(true);
+
+    // Initialize sticky state on mount
+    handleStickyNavbar();
+
     window.addEventListener("scroll", handleStickyNavbar, { passive: true });
     return () => window.removeEventListener("scroll", handleStickyNavbar);
   }, []);
@@ -36,23 +44,24 @@ const Header = () => {
     }
   };
 
+  // Prevent hydration mismatch by not applying sticky styles until mounted
+  const headerClasses = mounted && sticky
+    ? "fixed z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm transition-all duration-300 dark:bg-slate-900/80 dark:border-slate-700/60"
+    : "absolute bg-transparent";
+
+  const logoClasses = mounted && sticky ? "py-5 lg:py-2" : "py-8";
+
   return (
     <div id={"menu"}>
       <header
-        className={`header top-0 left-0 z-40 flex-1 w-full items-center ${
-          sticky
-            ? "fixed z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm transition-all duration-300 dark:bg-slate-900/80 dark:border-slate-700/60"
-            : "absolute bg-transparent"
-        }`}
+        className={`header top-0 left-0 z-40 flex-1 w-full items-center ${headerClasses}`}
       >
         <div id={"header"} className="container">
           <div className="relative w-full flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
-                className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
+                className={`header-logo block w-full ${logoClasses}`}
               >
                 <Image
                   src="/images/logo.png"
