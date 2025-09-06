@@ -71,7 +71,7 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="w-full px-4 md:w-1/2 lg:w-1/2">
               <div
-                className="wow fadeInUp mb-10 rounded-md bg-white p-8 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark lg:px-5 xl:px-8"
+                className="wow fadeInUp mb-10 rounded-md bg-white p-8 shadow-two duration-300 hover:shadow-one dark:bg-gray-800 dark:shadow-three dark:hover:shadow-gray-dark lg:px-5 xl:px-8"
                 data-wow-delay=".1s"
               >
                 <h3 className="mb-8 text-xl font-bold text-black dark:text-white">

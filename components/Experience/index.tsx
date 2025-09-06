@@ -79,7 +79,7 @@ const Experience = () => {
 
                   {/* Content */}
                   <div className={`w-full pl-12 md:w-1/2 md:pl-0 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
-                    <div className="rounded-md bg-white p-6 shadow-two dark:bg-dark dark:shadow-three">
+                    <div className="rounded-md bg-white p-6 shadow-two dark:bg-gray-800 dark:shadow-three">
                       <span className="mb-2 inline-block rounded bg-primary px-3 py-1 text-sm font-medium text-white">
                         {exp.year}
                       </span>

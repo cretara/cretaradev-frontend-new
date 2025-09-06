@@ -12,7 +12,7 @@ const ThemeToggler = () => {
 
     if (!mounted) {
         return (
-            <div className="h-9 w-9 md:h-14 md:w-14 rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse"/>
+            <div className="h-9 w-9 md:h-14 md:w-14 rounded-full bg-gray-200 animate-pulse"/>
         );
     }
 
@@ -28,16 +28,15 @@ const ThemeToggler = () => {
         <button
             onClick={toggleTheme}
             className="
-        bg-gray-100 dark:bg-slate-700
-        hover:bg-gray-200 dark:hover:bg-slate-600
+        bg-gray-100
+        hover:bg-gray-200
         flex h-9 w-9 cursor-pointer items-center justify-center
-        rounded-full text-gray-900 dark:text-slate-100
+        rounded-full text-gray-900
         md:h-14 md:w-14
         transition-all duration-300 ease-in-out
         shadow-sm hover:shadow-md
         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-        dark:focus:ring-offset-slate-800
-        border border-gray-200 dark:border-slate-600
+        border border-gray-200
       "
             aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
             title={`Current: ${theme} (${resolvedTheme})`}

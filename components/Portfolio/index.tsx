@@ -7,7 +7,7 @@ const Portfolio = () => {
       id: 1,
       title: "Enterprise Management System",
       description: "A comprehensive ERP solution for medium to large businesses with real-time analytics, inventory management, and automated reporting capabilities.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
+      image: "",
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
       category: "Web Application",
       link: "#",
@@ -17,7 +17,7 @@ const Portfolio = () => {
       id: 2,
       title: "Public Administration Portal",
       description: "Digital transformation platform for government services with citizen portal, document management, and workflow automation.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop",
+      image: "",
       technologies: ["Next.js", "TypeScript", "MongoDB", "Docker"],
       category: "Government",
       link: "#",
@@ -27,7 +27,7 @@ const Portfolio = () => {
       id: 3,
       title: "Mobile Banking Application",
       description: "Secure mobile banking solution with biometric authentication, real-time transactions, and advanced security features.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop",
+      image: "",
       technologies: ["React Native", "Java", "Redis", "Kubernetes"],
       category: "Mobile App",
       link: "#",
@@ -37,7 +37,7 @@ const Portfolio = () => {
       id: 4,
       title: "E-commerce Platform",
       description: "Scalable e-commerce solution with microservices architecture, payment integration, and real-time inventory management.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+      image: "",
       technologies: ["Vue.js", "Python", "GraphQL", "AWS"],
       category: "E-commerce",
       link: "#",
@@ -47,7 +47,7 @@ const Portfolio = () => {
       id: 5,
       title: "Healthcare Management System",
       description: "HIPAA-compliant healthcare platform with patient records, appointment scheduling, and telemedicine capabilities.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+      image: "",
       technologies: ["Angular", "Spring Boot", "PostgreSQL", "Docker"],
       category: "Healthcare",
       link: "#",
@@ -57,7 +57,7 @@ const Portfolio = () => {
       id: 6,
       title: "IoT Dashboard",
       description: "Real-time IoT monitoring dashboard with data visualization, alerts, and predictive analytics for industrial applications.",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
+      image: "",
       technologies: ["React", "Node.js", "InfluxDB", "Grafana"],
       category: "IoT",
       link: "#",
@@ -94,7 +94,7 @@ const Portfolio = () => {
           {categories.map((category, index) => (
             <button
               key={index}
-              className="mb-3 mr-3 rounded-md bg-gray-100 px-4 py-2 text-base font-medium text-gray-700 shadow-one duration-300 hover:bg-primary hover:text-white dark:bg-dark dark:text-white dark:shadow-three dark:hover:bg-primary border border-gray-200 dark:border-gray-600"
+              className="mb-3 mr-3 rounded-md bg-gray-100 px-4 py-2 text-base font-medium text-gray-700 shadow-one duration-300 hover:bg-primary hover:text-white dark:bg-gray-800 dark:text-white dark:shadow-three dark:hover:bg-primary border border-gray-200 dark:border-gray-600"
             >
               {category}
             </button>
@@ -106,7 +106,7 @@ const Portfolio = () => {
           {projects.map((project) => (
             <div key={project.id} className="w-full px-4 md:w-1/2 xl:w-1/3">
               <div
-                className="wow fadeInUp relative mb-10 overflow-hidden rounded-md bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark"
+                className="wow fadeInUp relative mb-10 overflow-hidden rounded-md bg-white shadow-one duration-300 hover:shadow-two dark:bg-gray-800 dark:shadow-three dark:hover:shadow-gray-dark"
                 data-wow-delay=".1s"
               >
                 <div className="relative overflow-hidden">

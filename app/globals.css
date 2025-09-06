@@ -1,23 +1,23 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Theme CSS Custom Properties */
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-    /* Increase light theme contrast for Tailwind v4 gray tokens */
-    /* This safely bumps common paragraph/link grays without touching headings */
-    --color-gray-500: #475569; /* slate-600: darker than default gray-500 */
-    --color-gray-600: #374151; /* gray-700 for stronger contrast on white */
-    --primary: #4F46E5;
-    --primary-hover: #4338CA;
-    --body-color: #374151; /* gray-700 for readable body copy on white */
-    --gray-light: #F7F8FC;
-    --bg-color-dark: #0F172A;
-    --dark: #1E293B;
-    --gray-dark: #1F2937;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  /* Increase light theme contrast for Tailwind v4 gray tokens */
+  /* This safely bumps common paragraph/link grays without touching headings */
+  --color-gray-500: #475569; /* slate-600: darker than default gray-500 */
+  --color-gray-600: #374151; /* gray-700 for stronger contrast on white */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --body-color: #374151; /* gray-700 for readable body copy on white */
+  --gray-light: #f7f8fc;
+  --bg-color-dark: #0f172a;
+  --dark: #1e293b;
+  --gray-dark: #1f2937;
 }
 
 /*
@@ -57,273 +57,271 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 body {
-    scroll-behavior: smooth;
-    background-color: #ffffff !important;
-    color: #374151 !important; /* gray-700: AA on white for paragraphs */
-    transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+  background-color: #ffffff !important;
+  color: #374151 !important; /* gray-700: AA on white for paragraphs */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .dark body {
-    background-color: #0f172a !important;
-    color: #f1f5f9 !important;
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
 }
 
 #home {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .dark #home {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 html {
-    background-color: #ffffff !important;
-    scroll-behavior: smooth;
+  background-color: #ffffff !important;
+  scroll-behavior: smooth;
 }
 
 .dark html {
-    background-color: #0f172a !important;
+  background-color: #0f172a !important;
 }
 
 /* Custom portfolio styles */
 .wow {
-    opacity: 1;
-    transition: all 0.6s ease-in-out;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
 }
 
 /* Dark mode overrides */
 .dark {
-    --body-color: #CBD5E1;
-    --gray-light: #1E293B;
-    --bg-color-dark: #0F172A;
+  --body-color: #cbd5e1;
+  --gray-light: #1e293b;
+  --bg-color-dark: #0f172a;
 }
 
 /* Utility classes */
 .text-primary {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .bg-primary {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .border-primary {
-    border-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .text-body-color {
-    color: var(--body-color);
+  color: var(--body-color);
 }
 
 .bg-gray-light {
-    background-color: var(--gray-light);
+  background-color: var(--gray-light);
 }
 
 .bg-bg-color-dark {
-    background-color: var(--bg-color-dark);
+  background-color: var(--bg-color-dark);
 }
 
 .bg-dark {
-    background-color: var(--dark);
-}
-
-.bg-gray-dark {
-    background-color: var(--gray-dark);
+  background-color: var(--dark);
 }
 
 /* Shadow utilities */
 .shadow-one {
-    box-shadow: 0 2px 3px rgba(7, 7, 77, 0.05);
+  box-shadow: 0 2px 3px rgba(7, 7, 77, 0.05);
 }
 
 .shadow-two {
-    box-shadow: 0 5px 10px rgba(4, 10, 34, 0.15);
+  box-shadow: 0 5px 10px rgba(4, 10, 34, 0.15);
 }
 
 .shadow-three {
-    box-shadow: 0 5px 15px rgba(34, 34, 34, 0.1);
+  box-shadow: 0 5px 15px rgba(34, 34, 34, 0.1);
 }
 
 .shadow-submit {
-    box-shadow: 0 5px 20px rgba(4, 10, 34, 0.1);
+  box-shadow: 0 5px 20px rgba(4, 10, 34, 0.1);
 }
 
 .shadow-submit-dark {
-    box-shadow: 0 5px 20px rgba(4, 10, 34, 0.1);
+  box-shadow: 0 5px 20px rgba(4, 10, 34, 0.1);
 }
 
 .drop-shadow-three {
-    filter: drop-shadow(0 5px 15px rgba(34, 34, 34, 0.1));
+  filter: drop-shadow(0 5px 15px rgba(34, 34, 34, 0.1));
 }
 
 /* Container styles */
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media (max-width: 1199px) {
-    .container {
-        max-width: 1140px;
-    }
+  .container {
+    max-width: 1140px;
+  }
 }
 
 @media (max-width: 991px) {
-    .container {
-        max-width: 960px;
-    }
+  .container {
+    max-width: 960px;
+  }
 }
 
 @media (max-width: 767px) {
-    .container {
-        max-width: 540px;
-    }
+  .container {
+    max-width: 540px;
+  }
 }
 
 @media (max-width: 575px) {
-    .container {
-        max-width: 100%;
-        padding: 0 15px;
-    }
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
 }
 
 /* Custom button hover effects */
 .btn-primary {
-    background-color: var(--primary);
-    color: white;
-    transition: all 0.3s ease-in-out;
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
 }
 
 /* Improve default link readability in light mode */
 a {
-    color: inherit;
+  color: inherit;
 }
 .dark a {
-    color: inherit;
+  color: inherit;
 }
 
 /* Portfolio grid animations */
 .portfolio-item {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /* Timeline styles */
 .timeline-item {
-    position: relative;
+  position: relative;
 }
 
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: var(--primary);
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--primary);
 }
 
 /* Progress bar animations */
 .progress-bar {
-    animation: progressAnimation 2s ease-in-out;
+  animation: progressAnimation 2s ease-in-out;
 }
 
 @keyframes progressAnimation {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 
 /* Card hover effects */
 .card-hover {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive text sizing */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem !important;
-    }
-    
-    h2 {
-        font-size: 1.75rem !important;
-    }
-    
-    h3 {
-        font-size: 1.5rem !important;
-    }
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+  }
 }
 
 /* Additional Tailwind utility classes for theme support */
 @layer components {
   .bg-gray-2 {
-    background-color: #F1F5F9;
+    background-color: #f1f5f9;
   }
-  
+
   .dark .bg-gray-2 {
     background-color: #334155;
   }
-  
+
   .bg-dark-bg {
-    background-color: #0F172A;
+    background-color: #0f172a;
   }
-  
+
   .dark .bg-dark-bg {
-    background-color: #1E293B;
+    background-color: #1e293b;
   }
-  
+
   .bg-bg-color-dark {
     background-color: var(--bg-color-dark);
   }
-  
+
   .dark .bg-bg-color-dark {
-    background-color: #0F172A;
+    background-color: #0f172a;
   }
-  
+
   .text-dark {
-    color: #1F2937; /* Slightly darker for better contrast */
+    color: #1f2937; /* Slightly darker for better contrast */
   }
-  
+
   .dark .text-dark {
-    color: #F8FAFC;
+    color: #f8fafc;
   }
-  
+
   .bg-dark {
-    background-color: #1E293B;
+    background-color: #1e293b;
   }
-  
+
   .dark .bg-dark {
     background-color: #334155;
   }
-  
+
   .bg-gray-light {
     background-color: var(--gray-light);
   }
-  
+
   .dark .bg-gray-light {
-    background-color: #1E293B;
+    background-color: #1e293b;
   }
 }
