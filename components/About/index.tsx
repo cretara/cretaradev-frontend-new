@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const About = () => {
   return (
@@ -31,7 +30,7 @@ const About = () => {
                       />
                     </svg>
                     <h3 className="text-xl font-bold">Senior Developer</h3>
-                    <p className="text-sm opacity-90">17+ Years Experience</p>
+                    <p className="text-sm opacity-90">18+ Years Experience</p>
                   </div>
                 </div>
               </div>

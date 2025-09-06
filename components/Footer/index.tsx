@@ -22,7 +22,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Full-stack engineer with 17+ years of experience creating innovative solutions for enterprise and public sector clients. Passionate about technology and open-source development.
+                  Full-stack engineer with 18+ years of experience creating innovative solutions for enterprise and public sector clients. Passionate about technology and open-source development.
                 </p>
         <div className="flex items-center">
                   <a

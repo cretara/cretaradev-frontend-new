@@ -8,7 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Cretara.dev - Full-Stack Engineer & Architect",
-  description: "Portfolio of a senior full-stack engineer with 17+ years of experience in web and mobile development for enterprise and public sector clients.",
+  description: "Portfolio of a senior full-stack engineer with 18+ years of experience in web and mobile development for enterprise and public sector clients.",
 };
 
 export default function RootLayout({
