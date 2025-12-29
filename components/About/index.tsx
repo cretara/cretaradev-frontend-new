@@ -15,7 +15,7 @@ const About = () => {
                 data-wow-delay=".2s"
               >
                 <div className="mx-auto flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/80 text-white">
-                  <div className="text-center">
+                  <div className="text-center text-black dark:text-white">
                     <svg
                       className="mx-auto mb-4 h-20 w-20"
                       fill="none"
@@ -42,7 +42,9 @@ const About = () => {
                     Full-Stack Engineering Excellence
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
-                    With over 17 years of experience in software development, I specialize in creating scalable web and mobile applications for public administrations and enterprise clients.
+                    With over 17 years of experience in software development, I
+                    specialize in creating scalable web and mobile applications
+                    for public administrations and enterprise clients.
                   </p>
                 </div>
                 <div className="mb-9">
@@ -50,7 +52,10 @@ const About = () => {
                     Architecture & Innovation
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
-                    I design robust system architectures and implement cutting-edge technologies to solve complex business challenges while maintaining high code quality and performance standards.
+                    I design robust system architectures and implement
+                    cutting-edge technologies to solve complex business
+                    challenges while maintaining high code quality and
+                    performance standards.
                   </p>
                 </div>
                 <div className="mb-1">
@@ -58,7 +63,9 @@ const About = () => {
                     Open Source Advocate
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
-                    Passionate contributor to the open-source ecosystem, believing in the power of collaborative development and knowledge sharing to advance the technology community.
+                    Passionate contributor to the open-source ecosystem,
+                    believing in the power of collaborative development and
+                    knowledge sharing to advance the technology community.
                   </p>
                 </div>
               </div>
