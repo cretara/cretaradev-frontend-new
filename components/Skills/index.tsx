@@ -146,7 +146,7 @@ const Skills = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-127.5 text-center lg:mb-20">
-              <span className="mb-2 block text-lg font-semibold text-primary">
+              <span className="mb-2 block text-lg font-semibold text-black dark:text-white">
                 Technical Expertise
               </span>
               <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[40px]">
