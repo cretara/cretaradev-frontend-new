@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,25 +17,21 @@ export default function ScrollToTop() {
     let timeoutId: NodeJS.Timeout;
 
     const toggleVisibility = () => {
-      // Use requestAnimationFrame to ensure we're in a browser environment
-      if (typeof window !== "undefined") {
-        const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+      if (globalThis.window !== undefined) {
+        const scrolled =
+          document.documentElement.scrollTop || document.body.scrollTop;
         setIsVisible(scrolled > 300);
       }
     };
 
     const handleScroll = () => {
-      // Debounce scroll events
       clearTimeout(timeoutId);
       timeoutId = setTimeout(toggleVisibility, 10);
     };
 
-    // Only add event listener and check scroll position after component mounts
-    if (typeof window !== "undefined") {
-      // Initial check
+    if (globalThis.window !== undefined) {
       toggleVisibility();
 
-      // Add passive event listener for better performance
       window.addEventListener("scroll", handleScroll, { passive: true });
 
       return () => {
