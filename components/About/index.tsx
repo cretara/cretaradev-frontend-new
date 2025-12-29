@@ -29,7 +29,9 @@ const About = () => {
                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                       />
                     </svg>
-                    <h3 className="text-xl font-bold">Senior Developer</h3>
+                    <h3 className="text-xl font-bold">
+                      Senior Developer and Architect
+                    </h3>
                     <p className="text-sm opacity-90">18+ Years Experience</p>
                   </div>
                 </div>
@@ -39,10 +41,10 @@ const About = () => {
               <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
                 <div className="mb-9">
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                    Full-Stack Engineering Excellence
+                    Full-Stack and Architecture Engineering Excellence
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
-                    With over 17 years of experience in software development, I
+                    With over 18 years of experience in software development, I
                     specialize in creating scalable web and mobile applications
                     for public administrations and enterprise clients.
                   </p>
@@ -55,7 +57,8 @@ const About = () => {
                     I design robust system architectures and implement
                     cutting-edge technologies to solve complex business
                     challenges while maintaining high code quality and
-                    performance standards.
+                    performance standards, respecting users' expectation and
+                    requests.
                   </p>
                 </div>
                 <div className="mb-1">
