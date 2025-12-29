@@ -18,7 +18,7 @@ const Header = () => {
   const [sticky, setSticky] = useState(false);
 
   const handleStickyNavbar = () => {
-    if (typeof window !== 'undefined' && window.scrollY >= 80) {
+    if (globalThis.window !== undefined && globalThis.window.scrollY >= 80) {
       setSticky(true);
     } else {
       setSticky(false);
@@ -28,7 +28,6 @@ const Header = () => {
   useEffect(() => {
     setMounted(true);
 
-    // Initialize sticky state on mount
     handleStickyNavbar();
 
     window.addEventListener("scroll", handleStickyNavbar, { passive: true });
@@ -44,10 +43,10 @@ const Header = () => {
     }
   };
 
-  // Prevent hydration mismatch by not applying sticky styles until mounted
-  const headerClasses = mounted && sticky
-    ? "fixed z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm transition-all duration-300 dark:bg-slate-900/80 dark:border-slate-700/60"
-    : "absolute bg-transparent";
+  const headerClasses =
+    mounted && sticky
+      ? "fixed z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/80 shadow-sm transition-all duration-300 dark:bg-slate-900/80 dark:border-slate-700/60"
+      : "absolute bg-transparent";
 
   const logoClasses = mounted && sticky ? "py-5 lg:py-2" : "py-8";
 
@@ -57,20 +56,12 @@ const Header = () => {
         className={`header top-0 left-0 z-40 flex-1 w-full items-center ${headerClasses}`}
       >
         <div id={"header"} className="container">
-          <div className="relative w-full flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+          <div className="relative w-full flex items-center">
+            <div className="flex w-1/6 px-4">
               <Link
                 href="/"
                 className={`header-logo block w-full ${logoClasses}`}
               >
-                <Image
-                  src="/images/logo.png"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                  suppressHydrationWarning={true}
-                />
                 <Image
                   src="/images/logo.png"
                   alt="logo"
@@ -81,8 +72,8 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
-              <div>
+            <div className="flex flex-1 items-center px-4">
+              <div id="header-center-menu" className="flex w-full">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -107,19 +98,22 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar right-0 z-30 rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-full lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="flex w-full items-center justify-between lg:flex lg:space-x-0">
                     {menuData.map((menuItem, index) => (
-                      <li key={menuItem.id} className="group relative">
+                      <li
+                        key={menuItem.id}
+                        className="flex-1 basis-0 text-center"
+                      >
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            className={`w-full block text-center py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:block lg:py-6 lg:px-0`}
                           >
                             {menuItem.title}
                           </Link>
@@ -128,7 +122,7 @@ const Header = () => {
                             <button
                               onClick={() => handleSubmenu(index)}
                               onKeyUp={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0"
+                              className="w-full flex cursor-pointer items-center justify-center gap-2 py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:block lg:py-6 lg:px-0"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -162,10 +156,10 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <div>
-                  <ThemeToggler />
-                </div>
+            </div>
+            <div className="flex w-1/6 items-center">
+              <div>
+                <ThemeToggler />
               </div>
             </div>
           </div>
