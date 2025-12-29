@@ -7,10 +7,6 @@ const nextConfig = {
         hostname: "**",
       },
       {
-        protocol: "http",
-        hostname: "**",
-      },
-      {
         protocol: "https",
         hostname: "cretara.dev",
       },
