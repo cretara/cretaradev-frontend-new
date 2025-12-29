@@ -7,14 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fix-lints": "standardx src/**/*.ts src/**/*.tsx --fix"
+    "fix-lints": "next lint --fix"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
     "@types/node": "20.12.7",
     "@types/react": "18.2.78",
     "@types/react-dom": "18.2.25",
-    "eslint-config-next": "^14.2.1",
+    "eslint-config-next": "^16.1.1",
     "negotiator": "^0.6.3",
     "next": "^15.3.4",
     "next-themes": "^0.3.0",
@@ -28,13 +28,9 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.11",
     "@types/negotiator": "^0.6.4",
-    "@typescript-eslint/eslint-plugin": "^8.35.0",
-    "@typescript-eslint/parser": "^8.35.0",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^8.57.1",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-n": "^17.20.0",
-    "eslint-plugin-promise": "^7.2.1",
-    "standardx": "7.0.0"
+    "@typescript-eslint/eslint-plugin": "^8.51.0",
+    "@typescript-eslint/parser": "^8.51.0",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9.39.2"
   }
 }
