@@ -11,26 +11,27 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.78",
-    "@types/react-dom": "18.2.25",
-    "eslint-config-next": "^16.1.1",
-    "negotiator": "^0.6.3",
-    "next": "^15.3.4",
-    "next-themes": "^0.3.0",
-    "postcss": "8.4.38",
-    "prettier": "^3.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^4.1.11",
-    "typescript": "5.8.3"
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.2",
+    "concat-map": "^0.0.2",
+    "eslint-config-next": "^15.1.6",
+    "negotiator": "^1.0.0",
+    "next": "^16.1.1",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/negotiator": "^0.6.4",
     "@typescript-eslint/eslint-plugin": "^8.51.0",
     "@typescript-eslint/parser": "^8.51.0",
     "autoprefixer": "^10.4.23",
-    "eslint": "^9.39.2"
+    "eslint": "^9.17.0"
   }
 }
