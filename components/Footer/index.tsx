@@ -14,29 +14,21 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="images/logo/logo-2.svg"
-                    alt="logo"
-                    className="w-full dark:hidden"
+                    src="/images/logo.png"
+                    alt="Cretara.dev"
+                    className="w-auto h-8"
                     width={140}
-                    height={30}
-                  />
-                  <Image
-                    src="images/logo/logo.svg"
-                    alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
+                    height={32}
                   />
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  Full-stack engineer with 18+ years of experience creating innovative solutions for enterprise and public sector clients. Passionate about technology and open-source development.
                 </p>
-                <div className="flex items-center">
+        <div className="flex items-center">
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+          className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="9"
@@ -50,7 +42,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="19"
@@ -64,7 +56,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="18"
@@ -78,7 +70,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-[#CED3F6] hover:text-primary"
+                    className="mr-6 text-gray-500 hover:text-primary dark:text-slate-300"
                   >
                     <svg
                       width="17"
@@ -203,16 +195,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="bg-primary/10 py-8">
-          <div className="container">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Template by UIdeck and{" "}
-              <a href="https://nextjstemplates.com" rel="nofollow noopener">
-                Next.js Templates
-              </a>
-            </p>
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
