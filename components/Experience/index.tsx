@@ -1,7 +1,16 @@
 import { Exp } from "@/types/exp";
+import { useEffect, useState } from "react";
 
 const Experience = () => {
-  const experiences: Exp[] = [];
+  const [experiences, setExperiences] = useState<Exp[]>([]);
+
+  useEffect(() => {
+    const fetchExperiences = async () => {
+      const fetchedExperiences: Exp[] = [];
+      setExperiences(fetchedExperiences);
+    };
+    fetchExperiences();
+  }, []);
 
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-28">
