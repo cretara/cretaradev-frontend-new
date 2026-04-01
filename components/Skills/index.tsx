@@ -125,7 +125,7 @@ const Skills = () => {
                   {category.skills.map((skill) => {
                     const id = `${category.title}-${skill.name}`;
                     const current =
-                      animatedValues[id] ?? (isVisible ? skill.level : 0);
+                      animatedValues[id] ?? 0;
                     return (
                       <div key={id}>
                         <div className="mb-2 flex justify-between">
