@@ -218,7 +218,7 @@ const Contact = () => {
                 </h4>
                 <div className="flex items-center space-x-4">
                   <a
-                    href="https://"
+                    href="https://twitter.com"
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[#4064AC] text-white hover:shadow-md"
                   >
                     <svg
