@@ -67,7 +67,7 @@ const Header = () => {
                   alt="logo"
                   width={140}
                   height={30}
-                  className="hidden w-full dark:block"
+                  className="w-full"
                   suppressHydrationWarning={true}
                 />
               </Link>
