@@ -246,7 +246,7 @@ const Contact = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://"
+                    href="#"
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[#333] text-white hover:shadow-md"
                   >
                     <svg
