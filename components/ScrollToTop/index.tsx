@@ -14,7 +14,7 @@ export default function ScrollToTop() {
   }, []);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
     const toggleVisibility = () => {
       if (globalThis.window !== undefined) {
