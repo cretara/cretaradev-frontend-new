@@ -33,8 +33,7 @@ const ThemeToggler = () => {
     );
   }
 
-  const calculatedTheme = theme === "system" ? getPrefersColorScheme() : theme;
-  const isDark = calculatedTheme === "dark";
+  const isDark = resolvedTheme === "dark";
 
   const toggleTheme = () => {
     const newTheme = isDark ? "light" : "dark";
