@@ -111,11 +111,7 @@ const Experience = () => {
                         {singleExperience.title}
                       </h3>
                       <h4
-                        className="mb-4 text-lg font-semibold bg-primary/10 text-primary rounded px-2 py-1 dark:bg-primary/30 dark:text-primary-200"
-                        style={{
-                          boxShadow: '0 1px 6px 0 rgba(0,0,0,0.07)',
-                          display: 'inline-block',
-                        }}
+                        className="mb-4 inline-block rounded-md border border-primary/30 bg-gray-100 px-3 py-1 text-lg font-semibold text-gray-900 dark:border-primary/40 dark:bg-gray-700 dark:text-white"
                       >
                         {singleExperience.company}
                       </h4>
