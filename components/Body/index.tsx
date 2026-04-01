@@ -26,14 +26,6 @@ const Body = () => {
                   mobile applications for public administrations and enterprise
                   clients.
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <a
-                    href="#contact"
-                    className="rounded-md bg-gray-200 px-8 py-4 text-base font-semibold text-gray-900 duration-300 ease-in-out hover:bg-gray-300 dark:bg-white/20 dark:text-white dark:hover:bg-white/30 border border-gray-300 dark:border-white/30"
-                  >
-                    Get In Touch
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -43,7 +35,6 @@ const Body = () => {
       <About />
       <Skills />
       <Experience />
-      <Contact />
     </>
   );
 };

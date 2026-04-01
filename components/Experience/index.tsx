@@ -1,17 +1,21 @@
 import { Exp } from "@/types/exp";
-import { useEffect, useState } from "react";
 
 const Experience = () => {
-  const [experiences, setExperiences] = useState<Exp[]>([]);
-
-  useEffect(() => {
-    const fetchExperiences = async () => {
-      const fetchedExperiences: Exp[] = [];
-      setExperiences(fetchedExperiences);
-    };
-    fetchExperiences();
-  }, []);
-
+  const experiences: Exp[] = [
+    {
+      year: "2020 - Present",
+      title: "Senior Software Architect",
+      company: "Tech Solutions Inc.",
+      description:
+        "Leading the design and implementation of scalable web applications for enterprise clients. Collaborating with cross-functional teams to define architecture and ensure best practices.",
+      technologies: ["Node.js", "React", "AWS", "Docker"],
+    },
+    {
+      year: "2015 - 2020",
+      title: "Full-Stack Developer",
+      company: "Innovatech Ltd.",
+      description:    "Developed and maintained web applications for public administration clients. Worked closely with stakeholders to gather requirements and deliver high-quality solutions.",   technologies: ["Java", "Angular", "MySQL", "Azure"],  },
+  ];
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -38,7 +42,7 @@ const Experience = () => {
               {/* Timeline line */}
               <div className="absolute left-4 top-0 h-full w-0.5 bg-primary md:left-1/2 md:-translate-x-0.5"></div>
 
-              {experiences.map((singleExperience, index) => (
+              {experiences?.map((singleExperience, index) => (
                 <div
                   key={singleExperience.year}
                   className={`wow fadeInUp relative mb-12 flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
