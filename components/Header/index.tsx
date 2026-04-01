@@ -98,7 +98,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar right-0 z-30 rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-full lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-full lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
