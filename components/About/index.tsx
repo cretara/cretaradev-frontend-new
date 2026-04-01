@@ -44,7 +44,7 @@ const About = () => {
                     Full-Stack and Architecture Engineering Excellence
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg sm:leading-relaxed">
-                    With over 18 years of experience in software development, I
+                    With over 19 years of experience in software development, I
                     specialize in creating scalable web and mobile applications
                     for public administrations and enterprise clients.
                   </p>

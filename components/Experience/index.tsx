@@ -1,48 +1,7 @@
-import React from "react";
+import { Exp } from "@/types/exp";
 
 const Experience = () => {
-  const experiences = [
-    {
-      year: "2020 - Present",
-      title: "Senior Full-Stack Architect",
-      company: "Tech Solutions Enterprise",
-      description:
-        "Leading architecture design and development of enterprise-scale applications. Managing cross-functional teams and implementing best practices for scalable solutions.",
-      technologies: ["React", "Node.js", "AWS", "Kubernetes", "TypeScript"],
-    },
-    {
-      year: "2018 - 2020",
-      title: "Lead Software Engineer",
-      company: "Government Digital Services",
-      description:
-        "Spearheaded digital transformation initiatives for public administration systems. Developed citizen-facing portals and internal workflow automation tools.",
-      technologies: ["Vue.js", "Python", "PostgreSQL", "Docker", "Jenkins"],
-    },
-    {
-      year: "2015 - 2018",
-      title: "Full-Stack Developer",
-      company: "Financial Tech Innovations",
-      description:
-        "Built secure banking and financial applications with focus on compliance and security. Implemented real-time transaction processing systems.",
-      technologies: ["Angular", "Java", "Spring Boot", "Oracle", "Redis"],
-    },
-    {
-      year: "2012 - 2015",
-      title: "Software Developer",
-      company: "Healthcare Solutions Corp",
-      description:
-        "Developed HIPAA-compliant healthcare management systems. Created patient portals and integrated with various medical devices and systems.",
-      technologies: ["PHP", "MySQL", "jQuery", "Bootstrap", "Linux"],
-    },
-    {
-      year: "2008 - 2012",
-      title: "Junior Developer",
-      company: "Web Development Agency",
-      description:
-        "Started career developing custom websites and web applications for small to medium businesses. Gained experience in multiple technologies and frameworks.",
-      technologies: ["HTML/CSS", "JavaScript", "PHP", "MySQL", "WordPress"],
-    },
-  ];
+  const experiences: Exp[] = [];
 
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-28">
@@ -73,9 +32,8 @@ const Experience = () => {
               {experiences.map((singleExperience, index) => (
                 <div
                   key={singleExperience.year}
-                  className={`wow fadeInUp relative mb-12 flex items-center ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`wow fadeInUp relative mb-12 flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                   data-wow-delay=".1s"
                 >
                   {/* Timeline dot */}

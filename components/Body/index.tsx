@@ -22,7 +22,7 @@ const Body = () => {
                 </h1>
                 <p className="mb-12 text-base font-medium leading-relaxed! text-gray-600 dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                   Welcome to my portfolio. I'm a passionate full-stack engineer
-                  with over 18 years of experience creating scalable web and
+                  with over 19 years of experience creating scalable web and
                   mobile applications for public administrations and enterprise
                   clients.
                 </p>
