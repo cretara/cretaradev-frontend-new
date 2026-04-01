@@ -1,56 +1,7 @@
 "use client";
 
-const skillCategories = [
-  {
-    title: "Programming Languages & Frameworks",
-    skills: [{ name: "Java", level: 95 }],
-  },
-  {
-    title: "Front-end Technologies",
-    skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Vue.js", level: 25 },
-      { name: "Angular", level: 80 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "SASS/SCSS", level: 88 },
-    ],
-  },
-  {
-    title: "Backend & Database",
-    skills: [
-      { name: "Spring Boot", level: 95 },
-      { name: "Node.js", level: 92 },
-      { name: "Python", level: 88 },
-      { name: "PostgreSQL", level: 90 },
-      { name: "MongoDB", level: 90 },
-      { name: "Redis", level: 90 },
-    ],
-  },
-  {
-    title: "Cloud & DevOps",
-    skills: [
-      { name: "AWS", level: 90 },
-      { name: "Docker", level: 90 },
-      { name: "Kubernetes", level: 85 },
-      { name: "CI/CD", level: 92 },
-      { name: "CI/CD", level: 92 },
-    ],
-  },
-  {
-    title: "Mobile & Other",
-    skills: [
-      { name: "React Native", level: 88 },
-      { name: "Flutter", level: 75 },
-      { name: "GraphQL", level: 90 },
-      { name: "Microservices", level: 92 },
-      { name: "System Design", level: 95 },
-      { name: "Agile/Scrum", level: 95 },
-    ],
-  },
-];
-
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { skillCategories } from "@/app/constants/skill-categories";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);

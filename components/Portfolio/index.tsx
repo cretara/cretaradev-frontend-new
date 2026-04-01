@@ -65,7 +65,7 @@ const Portfolio = () => {
     },
   ];
 
-  const categories = ["All", "Web Application", "Mobile App", "Government", "E-commerce", "Healthcare", "IoT"];
+  const categories = ["Government", "Automotive", "Healthcare", "IoT", "Enterprise applications", "Web Application", "Mobile App"];
 
   return (
     <section

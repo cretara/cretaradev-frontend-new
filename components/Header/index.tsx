@@ -121,7 +121,6 @@ const Header = () => {
                           <>
                             <button
                               onClick={() => handleSubmenu(index)}
-                              onKeyUp={() => handleSubmenu(index)}
                               className="w-full flex cursor-pointer items-center justify-center gap-2 py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:block lg:py-6 lg:px-0"
                             >
                               {menuItem.title}
