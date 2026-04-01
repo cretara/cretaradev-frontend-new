@@ -144,27 +144,27 @@ html {
   filter: drop-shadow(0 5px 15px rgba(34, 34, 34, 0.1));
 }
 
-/* Custom app container styles (avoid overriding Tailwind's .container utility) */
-.app-container {
+/* Container styles */
+.container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 @media (max-width: 1199px) {
-  .app-container {
+  .container {
     max-width: 1140px;
   }
 }
 
 @media (max-width: 991px) {
-  .app-container {
+  .container {
     max-width: 960px;
   }
 }
 
 @media (max-width: 767px) {
-  .app-container {
+  .container {
     max-width: 540px;
   }
 }
