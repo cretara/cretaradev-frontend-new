@@ -1,5 +1,3 @@
-import React from "react";
-
 const Contact = () => {
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
