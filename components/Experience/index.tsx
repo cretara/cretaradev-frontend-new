@@ -67,9 +67,6 @@ const Experience = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-127.5 text-center lg:mb-20">
-              <span className="mb-2 block text-lg font-semibold text-primary">
-                Career Journey
-              </span>
               <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[40px]">
                 Professional Experience
               </h2>
@@ -110,7 +107,13 @@ const Experience = () => {
                       <h3 className="mb-2 text-xl font-bold text-black dark:text-white">
                         {singleExperience.title}
                       </h3>
-                      <h4 className="mb-4 text-lg font-semibold text-primary">
+                      <h4
+                        className="mb-4 text-lg font-semibold bg-primary/10 text-primary rounded px-2 py-1 dark:bg-primary/30 dark:text-primary-200"
+                        style={{
+                          boxShadow: '0 1px 6px 0 rgba(0,0,0,0.07)',
+                          display: 'inline-block',
+                        }}
+                      >
                         {singleExperience.company}
                       </h4>
                       <p className="mb-4 text-base font-medium leading-relaxed text-body-color">
