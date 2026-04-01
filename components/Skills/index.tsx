@@ -96,7 +96,7 @@ const Skills = () => {
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-12 max-w-127.5 text-center lg:mb-20">
+            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
               <span className="mb-2 block text-lg font-semibold text-black dark:text-white">
                 Technical Expertise
               </span>
