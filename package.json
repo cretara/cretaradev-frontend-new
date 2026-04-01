@@ -1,40 +1,36 @@
 {
   "name": "cretaradev-frontend-new",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "fix-lints": "standardx src/**/*.ts src/**/*.tsx --fix"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.4",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.78",
-    "@types/react-dom": "18.2.25",
-    "autoprefixer": "10.4.19",
-    "eslint": "9.26.0",
-    "eslint-config-next": "^14.2.1",
-    "negotiator": "^0.6.3",
-    "next": "^16.1.7",
-    "next-themes": "^0.3.0",
-    "postcss": "8.4.38",
-    "prettier": "^3.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "3.4.3",
-    "typescript": "5.4.5"
+    "@formatjs/intl-localematcher": "^0.8.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "concat-map": "^0.0.2",
+    "eslint-config-next": "^16.2.2",
+    "negotiator": "^1.0.0",
+    "next": "^16.2.2",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.8",
+    "prettier": "^3.8.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2"
   },
   "devDependencies": {
-    "@types/negotiator": "^0.6.3",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
-    "eslint-config-standard-with-typescript": "^43.0.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-n": "17.2.1",
-    "eslint-plugin-promise": "6.1.1",
-    "standardx": "7.0.0"
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/negotiator": "^0.6.4",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^10.1.0"
   }
 }

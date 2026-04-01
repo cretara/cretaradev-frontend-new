@@ -1,30 +1,44 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Top: 0 takes us all the way back to the top of the page
-  // Behavior: smooth keeps it smooth!
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const scrollToTop = useCallback(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }, []);
 
   useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      if (globalThis.window !== undefined) {
+        const scrolled =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        setIsVisible(scrolled > 300);
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    const handleScroll = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(toggleVisibility, 10);
+    };
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    if (globalThis.window !== undefined) {
+      toggleVisibility();
+
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        clearTimeout(timeoutId);
+      };
+    }
   }, []);
 
   return (
@@ -32,9 +46,8 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          onKeyUp={scrollToTop}
           aria-label="scroll to top"
-          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-submit"
         >
           <span className="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"></span>
         </button>
