@@ -3,19 +3,64 @@ import { Exp } from "@/types/exp";
 const Experience = () => {
   const experiences: Exp[] = [
     {
-      year: "2020 - Present",
-      title: "Senior Software Architect",
-      company: "Tech Solutions Inc.",
+      year: "Sept 2024 - Present",
+      title: "Senior Full-Stack Developer and Cloud Solution Architect",
+      company: "DXC Technology",
       description:
-        "Leading the design and implementation of scalable web applications for enterprise clients. Collaborating with cross-functional teams to define architecture and ensure best practices.",
-      technologies: ["Node.js", "React", "AWS", "Docker"],
+        "As a Full Stack Developer and Architect within BMW's New Car Evaluation (NCE) division, I have a critical role in designing, developing, testing, and maintaining end-to-end web applications in the AWS cloud environment that facilitate the assessment and evaluation of autonomous driving systems. This role combines technical expertise in both frontend and backend development with architectural leadership to deliver scalable, high-performance solutions. I'm working directly impacting BMW's ability to innovate and lead in the autonomous driving space, ensuring the delivery of safe, reliable, and cutting-edge vehicle technologies.",
+      technologies: ["Angular", "React", "AWS", "Kubernetes", "Docker", "Java", "Spring Boot", "Python", "PostgreSQL", "GitHub", "GitHub Actions", "MongoDB", "DynamoDB", "AWS"],
     },
     {
-      year: "2015 - 2020",
-      title: "Full-Stack Developer",
-      company: "Innovatech Ltd.",
-      description:    "Developed and maintained web applications for public administration clients. Worked closely with stakeholders to gather requirements and deliver high-quality solutions.",   technologies: ["Java", "Angular", "MySQL", "Azure"],  },
+      year: "Jun 2023 - Aug 2024",
+      title: "Senior Full-Stack Developer and Cloud Solution Architect",
+      company: "SCAI Tecno",
+      description: "Senior full stack engineer and architect in IT consulting services for medium-big enterprises in banking and vacancy management. I have been involved in the design and development of scalable web and mobile applications, cloud solutions, and microservices architectures, leveraging technologies such as Java, Spring Boot, Angular, React, SQL Server, Google Cloud Platform, Kubernetes, and Docker.",
+      technologies: ["Java", "Spring Boot", "Angular", "React", "C#", ".Net", "Ionic", "SQL Server", "Javascript", "Typescript", "Bootstrap", "Tailwind", "Google Cloud Platform", "Kubernetes", "Docker"],
+    },
+    {
+      year: "Jun 2019 - Jun 2023",
+      title: "Team Lead - Senior Full-Stack Developer and Cloud Solution Architect",
+      company: "LVIIIER - Frame S.r.l.",
+      description: "Team leader developer and technical department and responsible for design, analysis, implementation, and maintenance of the different applications related to the projects Pediatotem https://pediatotem.it/, GoMed https://gomed.it/ and Keymed https://pediatotem.it/home/keymed/", 
+      technologies: ["Java", "Spring Boot", "Angular", "Ionic", "Java Android", "C#", "MySQL", "PostgreSQL", "Vaadin", "PHP", "Google Cloud Platform", "Kubernetes", "Docker"],
+    },
+    {
+      year: "Oct 2016 - Jun 2023",
+      title: "Team Lead - Senior Full-Stack Developer and Cloud Solution Architect",
+      company: "Engineering Ingegneria Informatica S.p.A.",
+      description: "Design and development of J2EE, Javascript and PHP medium-large business applications as a consultant for Engineering Ingegneria Informatica S.p.A., Marghera - Venice office (consultant on HT Servizi S.r.l.), on behalf of the Veneto Region", 
+      technologies: ["Java", "Selenium", "TestLink", "Spring Boot", "Javascript", "JQuery UI", "Liferay", "C#", "Oracle DBMS", "PostgreSQL", "PHP", "Docker"],
+    },    
+    {
+      year: "May 2016 - Dec 2016",
+      title: "Team Lead - Senior Full-Stack Developer and Cloud Solution Architect",
+      company: "ADSU Teramo",
+      description: "Day-to-day management of infrastructure and applications, uploading content, updates and news to be published on the company’s official website http://www.adsuteramo.it, and technical support for the company’s social media channels. In particular:Technical support and management of the “Bike2Study” project, approved by Board Resolution No. 33 of 19 July 2016. Creation, activation, and management of the ADSU Teramo Facebook profile, and management of the company’s official website http://www.adsuteramo.it. Development of a web design project for the company website by a webmaster/web designer specialising in digital communication, to be submitted to the company for approval", 
+      technologies: ["Wordpress", "PHP", "MySQL", "Bootstrap", "jQuery"],
+    },    
+    {
+      year: "Jul 2008 - Oct 2016",
+      title: "Junior to Senior Full stack developer",
+      company: "ARIT - Regione Abruzzo",
+      description: "Design, development, and monitoring of information systems for public administrations in the Abruzzo Region. My work covered the sectors of healthcare, e-government, agriculture, transport, the digitisation of administrative processes and documents, the Digital Administration Code, administrative transparency, and online service portals for citizens and businesses. My responsibilities included the design and implementation of information systems (covering the application, processing, and communication infrastructure required to support them), installation and commissioning, user training, and first- and second-level maintenance and support.", 
+      technologies: ["Java", "Liferay", "JBoss", "Tomcat", "MySQL", "PostgreSQL", "Oracle", "PHP", "Symfony", "Joomla", "Drupal", "Wordpress", "Alfresco", "Javascript", "jQuery", "Bootstrap", "Networking admin", "Linux admin"],
+    },    
+    {
+      year: "Oct 2007 - Dec 2007",
+      title: "Junior to Senior Full stack developer consultant",
+      company: "BIC Western",
+      description: "Designer and developer of portlets for the Italian localization of the e-democracy portal developed as part of the WDCNET project (Digital Citizenship Developed on Wireless Networks in Geographically Isolated Areas, funded by the P.I.C. INTERREG III B programme - Code A.1.204)", 
+      technologies: ["Java", "Java enterprise", "Liferay", "Javascript", "Bootstrap", "MySQL"],
+    },        
+    {
+      year: "Jun 2007 - Jul 2007",
+      title: "External commissioneer state exam A.S. 2006/2007",
+      company: "Istituto Professionale “A. Pagliaccetti”, Giulianova (Italia)",
+      description: "External member of the A-level examination board for the subjects of Electronics and Electrical Engineering", 
+      technologies: [],
+    },    
   ];
+
   return (
     <section id="experience" className="py-16 md:py-20 lg:py-28">
       <div className="container">

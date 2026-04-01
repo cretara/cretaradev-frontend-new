@@ -1,8 +1,7 @@
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
-import Contact from "@/components/Contact";
-
+  
 const Body = () => {
   return (
     <>
@@ -18,7 +17,7 @@ const Body = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight light:text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Full-Stack Engineer & Architect
+                  Senior Full-Stack Developer and Cloud Solution Architect
                 </h1>
                 <p className="mb-12 text-base font-medium leading-relaxed! text-gray-600 dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                   Welcome to my portfolio. I'm a passionate full-stack engineer
