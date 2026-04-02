@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SetStateAction, useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
@@ -9,6 +10,7 @@ const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
 
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
@@ -27,11 +29,9 @@ const Header = () => {
 
   useEffect(() => {
     setMounted(true);
-
     handleStickyNavbar();
-
-    window.addEventListener("scroll", handleStickyNavbar, { passive: true });
-    return () => window.removeEventListener("scroll", handleStickyNavbar);
+    globalThis.window.addEventListener("scroll", handleStickyNavbar, { passive: true });
+    return () => globalThis.window.removeEventListener("scroll", handleStickyNavbar);
   }, []);
 
   const [openIndex, setOpenIndex] = useState(-1);
@@ -63,10 +63,10 @@ const Header = () => {
                 className={`header-logo block w-full ${logoClasses}`}
               >
                 <Image
-                  src="/images/logo.png"
+                  src={theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
                   alt="logo"
-                  width={140}
-                  height={30}
+                  width={224}
+                  height={56}
                   className="w-full"
                   suppressHydrationWarning={true}
                 />
