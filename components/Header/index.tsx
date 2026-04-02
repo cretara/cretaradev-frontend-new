@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { SetStateAction, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import ThemeToggler, { getPrefersColorScheme } from "./ThemeToggler";
+import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [imageSrc, setImageSrc] = useState("/images/logo-black.png");
   const { theme } = useTheme();
 
   const navbarToggleHandler = () => {
@@ -33,6 +34,10 @@ const Header = () => {
     globalThis.window.addEventListener("scroll", handleStickyNavbar, { passive: true });
     return () => globalThis.window.removeEventListener("scroll", handleStickyNavbar);
   }, []);
+
+  useEffect(() => {
+    setImageSrc(theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png');
+  }, [theme]);
 
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index: SetStateAction<number>) => {
@@ -63,7 +68,7 @@ const Header = () => {
                 className={`header-logo block w-full ${logoClasses}`}
               >
                 <Image
-                  src={theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
+                  src={imageSrc}
                   alt="logo"
                   width={224}
                   height={56}
