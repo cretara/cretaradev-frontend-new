@@ -63,7 +63,7 @@ const Header = () => {
                 className={`header-logo block w-full ${logoClasses}`}
               >
                 <Image
-                  src={getPrefersColorScheme() === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
+                  src={theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
                   alt="logo"
                   width={224}
                   height={56}
