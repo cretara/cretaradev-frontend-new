@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SetStateAction, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import ThemeToggler from "./ThemeToggler";
+import ThemeToggler, { getPrefersColorScheme } from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
@@ -63,7 +63,7 @@ const Header = () => {
                 className={`header-logo block w-full ${logoClasses}`}
               >
                 <Image
-                  src={theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
+                  src={getPrefersColorScheme() === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png'}
                   alt="logo"
                   width={224}
                   height={56}
