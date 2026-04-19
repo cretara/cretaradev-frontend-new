@@ -31,9 +31,9 @@ const Portfolio = () => {
 
         {/* Filter Buttons */}
         <div className="mb-12 flex flex-wrap justify-center">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <button
-              key={index}
+              key={category}
               className="mb-3 mr-3 rounded-md bg-gray-100 px-4 py-2 text-base font-medium text-gray-700 shadow-one duration-300 hover:bg-primary hover:text-white dark:bg-gray-800 dark:text-white dark:shadow-three dark:hover:bg-primary border border-gray-200 dark:border-gray-600"
             >
               {category}
@@ -83,9 +83,9 @@ const Portfolio = () => {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
+                  {project.technologies.map((tech) => (
                     <span
-                      key={index}
+                      key={`${project.id}-${tech}`}
                       className="rounded bg-gray-100 px-2 py-1 text-xs font-medium text-gray-800 dark:bg-gray-800 dark:text-gray-200"
                     >
                       {tech}

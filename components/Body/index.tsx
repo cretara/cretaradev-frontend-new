@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Credentials from "@/components/Credentials";
   
 const Body = () => {
   return (
@@ -34,6 +35,7 @@ const Body = () => {
       <About />
       <Skills />
       <Experience />
+      <Credentials />
     </>
   );
 };
