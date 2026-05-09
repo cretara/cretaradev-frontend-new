@@ -6,7 +6,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
-
   const [animatedValues, setAnimatedValues] = useState<Record<string, number>>(
     {},
   );
@@ -68,7 +67,7 @@ const Skills = () => {
   }, []);
 
   // Animate values using requestAnimationFrame for smooth increments
-  /* eslint-disable-next-line react-hooks/exhaustive-deps */
+ /* eslint-disable-next-line react-hooks/exhaustive-deps */
   useEffect(() => {
     if (!isVisible) return;
 
@@ -129,9 +128,12 @@ const Skills = () => {
                     return (
                       <div key={id}>
                         <div className="mb-2 flex justify-between">
-                          <span className="text-base font-medium text-dark dark:text-white">
-                            {skill.name}
-                          </span>
+                          <div className="flex items-center space-x-3">
+                            <img src={`/images/icons/${skill.name}.svg`} alt={`${skill.name} icon`} className="w-6 h-6 flex-shrink-0" />
+                            <span className="text-base font-medium text-dark dark:text-white">
+                              {skill.name}
+                           </span>
+                          </div>
                           <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
                             {current}%
                           </span>

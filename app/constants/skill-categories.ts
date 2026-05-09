@@ -1,4 +1,6 @@
-export const skillCategories = [
+import { SkillCategories } from '../../types/skill-category';
+
+export const skillCategories: SkillCategories = [
   {
     title: "Programming Languages & Frameworks",
     skills: [
