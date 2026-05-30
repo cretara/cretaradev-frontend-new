@@ -13,7 +13,7 @@ export function Providers({
       defaultTheme="system"
       storageKey="cretaradev-theme"
       disableTransitionOnChange={false}
-      enableColorScheme={false}
+      enableColorScheme={true}
     >
       {children}
     </ThemeProvider>
