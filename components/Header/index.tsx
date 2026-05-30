@@ -10,7 +10,7 @@ const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [imageSrc, setImageSrc] = useState("/images/logo-black.png");
+  const [imageSrc, setImageSrc] = useState("/images/logo.png");
   const { theme } = useTheme();
 
   const navbarToggleHandler = () => {
