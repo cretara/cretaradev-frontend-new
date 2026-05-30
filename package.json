@@ -13,6 +13,7 @@
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vercel/analytics": "^2.0.1",
     "concat-map": "^0.0.2",
     "eslint-config-next": "^16.2.2",
     "negotiator": "^1.0.0",

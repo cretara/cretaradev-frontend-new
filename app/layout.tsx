@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Providers } from "@/app/providers";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Cretara.dev - Full-Stack Engineer & Architect",
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
