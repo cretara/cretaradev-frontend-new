@@ -62,6 +62,8 @@ const Header = () => {
       >
         <div id={"header"} className="container">
           <div className="relative w-full flex items-center">
+
+
             <div className="flex w-3/6 lg:w-1/6 px-4">
               <Link
                 href="/"
