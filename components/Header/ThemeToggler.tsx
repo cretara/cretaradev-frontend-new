@@ -21,7 +21,7 @@ export function getPrefersColorScheme(): "dark" | "light" | "no-preference" {
 }
 
 const ThemeToggler = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme("dark");
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
