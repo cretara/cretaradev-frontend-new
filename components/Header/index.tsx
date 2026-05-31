@@ -31,12 +31,17 @@ const Header = () => {
   useEffect(() => {
     setMounted(true);
     handleStickyNavbar();
-    globalThis.window.addEventListener("scroll", handleStickyNavbar, { passive: true });
-    return () => globalThis.window.removeEventListener("scroll", handleStickyNavbar);
+    globalThis.window.addEventListener("scroll", handleStickyNavbar, {
+      passive: true,
+    });
+    return () =>
+      globalThis.window.removeEventListener("scroll", handleStickyNavbar);
   }, []);
 
   useEffect(() => {
-    setImageSrc(theme === 'dark' ? '/images/logo-dark.png' : '/images/logo-light.png');
+    setImageSrc(
+      theme === "dark" ? "/images/logo-dark.png" : "/images/logo-light.png",
+    );
   }, [theme]);
 
   const [openIndex, setOpenIndex] = useState(-1);
@@ -60,11 +65,9 @@ const Header = () => {
       <header
         className={`header top-0 left-0 z-40 flex-1 w-full items-center ${headerClasses}`}
       >
-        <div id={"header"} className="container">
-          <div className="relative w-full flex items-center">
-
-
-            <div className="flex w-3/6 lg:w-1/6 px-4">
+        <div id="header" className="container">
+          <div className="relative w-full flex items-center" id="header-menu">
+            <div className="flex w-3/6 lg:w-1/6 px-4" id="header-logo">
               <Link
                 href="/"
                 className={`header-logo block w-full ${logoClasses}`}
@@ -79,40 +82,62 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="flex flex-1 items-center px-4">
+            <div
+              className="hidden lg:flex lg:w-2/3 lg:grow items-center align-center" id="header-center-menu-desktop"
+            >
+              <nav className="navbar w-full">
+                <ul className="flex w-full items-center justify-end space-x-0 lg:space-x-6">
+                  {menuData.map((menuItem, index) => (
+                    <li key={menuItem.id} className="flex-1 basis-0 text-center">
+                      {menuItem.path ? (
+                        <Link 
+                          href={menuItem.path}
+                          className={`w-full block text-center py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:block lg:py-6 lg:px-0`}
+                        >
+                          {menuItem.title}
+                        </Link>
+                      ) : (
+                        <>
+                          {/* Submenu logic can be added here */}
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
-            <div className="flex w-1/6 items-center">
+            <div className="flex w-1/6 items-center justify-end" id="header-theme-toggler">
               <div>
                 <ThemeToggler />
               </div>
             </div>
-            <div className="flex w-1/6 items-center lg:hidden">
+            <div className="flex w-1/6 items-center lg:hidden" id="header-menu-mobile">
               <div id="header-center-menu" className="flex w-full">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden cursor-pointer"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-1.5 ring-primary focus:ring-2 lg:hidden cursor-pointer"
                 >
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
+                    className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? " top-1.75 rotate-45" : " "
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                    className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-all duration-300 dark:bg-white ${
                       navbarOpen ? "opacity-0 " : " "
                     }`}
                   />
                   <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
+                    className={`relative my-1.5 block h-0.5 w-7.5 bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? " -top-2 -rotate-45" : " "
                     }`}
                   />
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-full lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-full lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visible top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -148,7 +173,7 @@ const Header = () => {
                               </span>
                             </button>
                             <div
-                              className={`submenu relative top-full left-0 rounded-md bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-gray-800 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                              className={`submenu relative top-full left-0 rounded-md bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-gray-800 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-62.5 lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
