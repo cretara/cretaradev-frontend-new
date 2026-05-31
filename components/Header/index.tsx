@@ -62,7 +62,7 @@ const Header = () => {
       >
         <div id={"header"} className="container">
           <div className="relative w-full flex items-center">
-            <div className="flex w-1/6 px-4">
+            <div className="flex w-3/6 lg:w-1/6 px-4">
               <Link
                 href="/"
                 className={`header-logo block w-full ${logoClasses}`}
@@ -72,7 +72,7 @@ const Header = () => {
                   alt="logo"
                   width={224}
                   height={56}
-                  className="w-full"
+                  className="object-fit lg:w-full"
                   suppressHydrationWarning={true}
                 />
               </Link>
@@ -116,7 +116,7 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="flex w-full items-center justify-between lg:flex lg:space-x-0">
+                  <ul className="flex flex-col w-full items-center justify-between lg:flex lg:space-x-0">
                     {menuData.map((menuItem, index) => (
                       <li
                         key={menuItem.id}
