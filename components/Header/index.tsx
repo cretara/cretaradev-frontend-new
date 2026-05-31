@@ -78,6 +78,13 @@ const Header = () => {
               </Link>
             </div>
             <div className="flex flex-1 items-center px-4">
+            </div>
+            <div className="flex w-1/6 items-center">
+              <div>
+                <ThemeToggler />
+              </div>
+            </div>
+            <div className="flex w-1/6 items-center lg:hidden">
               <div id="header-center-menu" className="flex w-full">
                 <button
                   onClick={navbarToggleHandler}
@@ -159,11 +166,6 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
-              </div>
-            </div>
-            <div className="flex w-1/6 items-center">
-              <div>
-                <ThemeToggler />
               </div>
             </div>
           </div>
