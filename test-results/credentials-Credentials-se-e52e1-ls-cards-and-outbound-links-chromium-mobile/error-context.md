@@ -1,0 +1,283 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: credentials.spec.ts >> Credentials section >> credentials cards and outbound links
+- Location: tests\e2e\specs\credentials.spec.ts:5:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator:  locator('#menu')
+Expected: visible
+Received: hidden
+Timeout:  7000ms
+
+Call log:
+  - Expect "toBeVisible" with timeout 7000ms
+  - waiting for locator('#menu')
+    17 × locator resolved to <div id="menu">…</div>
+       - unexpected value "hidden"
+
+```
+
+```yaml
+- banner:
+  - link "logo":
+    - /url: /
+    - img "logo"
+  - button "Switch to dark mode":
+    - img
+  - button "Mobile Menu"
+- heading "Senior Full-Stack Developer and Cloud Solution Architect" [level=1]
+- paragraph: Welcome to my portfolio. I'm a passionate full-stack engineer with over 19 years of experience creating scalable web and mobile applications for public administrations and enterprise clients.
+- img
+- heading "Senior Full-Stack Developer and Cloud Solution Architect" [level=3]
+- paragraph: 19+ Years Experience
+- heading "Full-Stack and Cloud Solution Architecture Excellence" [level=3]
+- paragraph: With over 19 years of experience in software development, I specialize in creating enterprise-grade and scalable web and mobile applications for public administrations and enterprise clients.
+- heading "Architecture & Innovation" [level=3]
+- paragraph: I design robust system architectures and implement cutting-edge technologies to solve complex business challenges while maintaining high code quality and performance standards, respecting users' expectations and requests.
+- heading "Open Source Advocate" [level=3]
+- paragraph: Passionate contributor to the open-source ecosystem, believing in the power of collaborative development and knowledge sharing to advance the technology community.
+- text: Technical Expertise
+- heading "Skills & Technologies" [level=2]
+- paragraph: A comprehensive overview of the technologies and methodologies I've mastered throughout my career.
+- heading "Programming Languages & Frameworks" [level=3]
+- text: Java 0%
+- progressbar "Java skill level"
+- text: JavaScript 0%
+- progressbar "JavaScript skill level"
+- text: TypeScript 0%
+- progressbar "TypeScript skill level"
+- text: Python 0%
+- progressbar "Python skill level"
+- text: PHP 0%
+- progressbar "PHP skill level"
+- text: C 0%
+- progressbar "C skill level"
+- text: C++ 0%
+- progressbar "C++ skill level"
+- text: C# 0%
+- progressbar "C# skill level"
+- text: Pascal 0%
+- progressbar "Pascal skill level"
+- text: TCL 0%
+- progressbar "TCL skill level"
+- text: VHDL 0%
+- progressbar "VHDL skill level"
+- heading "Front-end Technologies" [level=3]
+- text: Angular 0%
+- progressbar "Angular skill level"
+- text: React/Next.js 0%
+- progressbar "React/Next.js skill level"
+- text: Redux 0%
+- progressbar "Redux skill level"
+- text: Prime NG 0%
+- progressbar "Prime NG skill level"
+- text: Tailwind CSS 0%
+- progressbar "Tailwind CSS skill level"
+- text: SASS/SCSS 0%
+- progressbar "SASS/SCSS skill level"
+- text: Bootstrap 0%
+- progressbar "Bootstrap skill level"
+- text: Material UI 0%
+- progressbar "Material UI skill level"
+- text: JQuery 0%
+- progressbar "JQuery skill level"
+- text: JQuery UI 0%
+- progressbar "JQuery UI skill level"
+- heading "Backend & Database" [level=3]
+- text: Rest API 0%
+- progressbar "Rest API skill level"
+- text: Microservices 0%
+- progressbar "Microservices skill level"
+- text: Spring Boot 0%
+- progressbar "Spring Boot skill level"
+- text: PostgreSQL 0%
+- progressbar "PostgreSQL skill level"
+- text: MySQL 0%
+- progressbar "MySQL skill level"
+- text: Oracle 0%
+- progressbar "Oracle skill level"
+- text: MongoDB 0%
+- progressbar "MongoDB skill level"
+- text: Redis 0%
+- progressbar "Redis skill level"
+- text: Elasticsearch 0%
+- progressbar "Elasticsearch skill level"
+- text: GraphQL 0%
+- progressbar "GraphQL skill level"
+- heading "Cloud & DevOps" [level=3]
+- text: AWS 0%
+- progressbar "AWS skill level"
+- text: Docker 0%
+- progressbar "Docker skill level"
+- text: Kubernetes 0%
+- progressbar "Kubernetes skill level"
+- text: GitHub Actions 0%
+- progressbar "GitHub Actions skill level"
+- text: CI/CD 0%
+- progressbar "CI/CD skill level"
+- heading "System Design & soft skills" [level=3]
+- text: System Design 0%
+- progressbar "System Design skill level"
+- text: Microservice Design 0%
+- progressbar "Microservice Design skill level"
+- text: Real-time System Design 0%
+- progressbar "Real-time System Design skill level"
+- text: Team leadership 0%
+- progressbar "Team leadership skill level"
+- text: Technical mentoring 0%
+- progressbar "Technical mentoring skill level"
+- text: Communication 0%
+- progressbar "Communication skill level"
+- heading "Mobile & Other" [level=3]
+- text: Ionic 0%
+- progressbar "Ionic skill level"
+- text: System Design 0%
+- progressbar "System Design skill level"
+- text: Agile/Scrum 0%
+- progressbar "Agile/Scrum skill level"
+- text: Team leadership 0%
+- progressbar "Team leadership skill level"
+- text: Technical mentoring 0%
+- progressbar "Technical mentoring skill level"
+- heading "Professional Experience" [level=2]
+- paragraph: Over 19 years of progressive experience in software development, from junior developer to senior architect.
+- text: Sept 2024 - Present
+- heading "Senior Full-Stack Developer and Cloud Solution Architect" [level=3]
+- heading "DXC Technology" [level=4]
+- paragraph: As a Full Stack Developer and Architect within BMW's New Car Evaluation (NCE) division, I have a critical role in designing, developing, testing, and maintaining end-to-end web applications in the AWS cloud environment that facilitate the assessment and evaluation of autonomous driving systems. This role combines technical expertise in both frontend and backend development with architectural leadership to deliver scalable, high-performance solutions. I'm working directly impacting BMW's ability to innovate and lead in the autonomous driving space, ensuring the delivery of safe, reliable, and cutting-edge vehicle technologies.
+- text: Angular React AWS Kubernetes Docker Java Spring Boot Python PostgreSQL GitHub GitHub Actions MongoDB DynamoDB AWS S3 AWS EKS AWS ECR AWS Glue AWS Athena AWS SNS AWS SQS AWS Lambda AWS API Gateway AWS CloudFormation AWS CloudWatch AWS CloudTrail Keycloak Jun 2023 - Aug 2024
+- heading "Senior Full-Stack Developer and Cloud Solution Architect" [level=3]
+- heading "SCAI Tecno" [level=4]
+- paragraph: Senior full stack engineer and architect in IT consulting services for medium-big enterprises in banking and vacancy management. I have been involved in the design and development of scalable web and mobile applications, cloud solutions, and microservices architectures, leveraging technologies such as Java, Spring Boot, Angular, React, SQL Server, Google Cloud Platform, Kubernetes, and Docker.
+- text: Java Spring Boot Angular React C# .Net Ionic SQL Server Javascript Typescript Bootstrap Tailwind Google Cloud Platform Kubernetes Docker Jun 2019 - Jun 2023
+- heading "Team Lead - Senior Full-Stack Developer and Cloud Solution Architect" [level=3]
+- heading "LVIIIER - Frame S.r.l." [level=4]
+- paragraph: Team leader developer and technical department and responsible for design, analysis, implementation, and maintenance of the different applications related to the projects Pediatotem https://pediatotem.it/, GoMed https://gomed.it/ and Keymed https://pediatotem.it/home/keymed/
+- text: Java Spring Boot Angular Ionic Java Android C# MySQL PostgreSQL Vaadin PHP Google Cloud Platform Kubernetes Docker Oct 2016 - Jun 2023
+- heading "Team Lead - Senior Full-Stack Developer and Cloud Solution Architect" [level=3]
+- heading "Engineering Ingegneria Informatica S.p.A." [level=4]
+- paragraph: Design and development of J2EE, Javascript and PHP medium-large business applications as a consultant for Engineering Ingegneria Informatica S.p.A., Marghera - Venice office (consultant on HT Servizi S.r.l.), on behalf of the Veneto Region
+- text: Java Selenium TestLink Spring Boot Javascript JQuery UI Liferay C# Oracle DBMS PostgreSQL PHP Docker Keycloak May 2016 - Dec 2016
+- heading "Team Lead - Senior Full-Stack Developer and Cloud Solution Architect" [level=3]
+- heading "ADSU Teramo" [level=4]
+- paragraph: Day-to-day management of infrastructure and applications, uploading content, updates and news to be published on the company’s official website http://www.adsuteramo.it, and technical support for the company’s social media channels. In particular:Technical support and management of the “Bike2Study” project, approved by Board Resolution No. 33 of 19 July 2016. Creation, activation, and management of the ADSU Teramo Facebook profile, and management of the company’s official website http://www.adsuteramo.it. Development of a web design project for the company website by a webmaster/web designer specialising in digital communication, to be submitted to the company for approval
+- text: Wordpress PHP MySQL Bootstrap jQuery Jul 2008 - Oct 2016
+- heading "Junior to Senior Full stack developer" [level=3]
+- heading "ARIT - Regione Abruzzo" [level=4]
+- paragraph: Design, development, and monitoring of information systems for public administrations in the Abruzzo Region. My work covered the sectors of healthcare, e-government, agriculture, transport, the digitisation of administrative processes and documents, the Digital Administration Code, administrative transparency, and online service portals for citizens and businesses. My responsibilities included the design and implementation of information systems (covering the application, processing, and communication infrastructure required to support them), installation and commissioning, user training, and first- and second-level maintenance and support.
+- text: Java Liferay JBoss Tomcat MySQL PostgreSQL Oracle PHP Symfony Joomla Drupal Wordpress Alfresco Javascript jQuery Bootstrap Networking admin Linux admin Oct 2007 - Dec 2007
+- heading "Junior to Senior Full stack developer consultant" [level=3]
+- heading "BIC Western" [level=4]
+- paragraph: Designer and developer of portlets for the Italian localization of the e-democracy portal developed as part of the WDCNET project (Digital Citizenship Developed on Wireless Networks in Geographically Isolated Areas, funded by the P.I.C. INTERREG III B programme - Code A.1.204)
+- text: Java Java enterprise Liferay Javascript Bootstrap MySQL Jun 2007 - Jul 2007
+- heading "External commissioneer state exam A.S. 2006/2007" [level=3]
+- heading "Istituto Professionale “A. Pagliaccetti”, Giulianova (Italia)" [level=4]
+- paragraph: External member of the A-level examination board for the subjects of Electronics and Electrical Engineering
+- heading "Credentials" [level=2]
+- paragraph: Showcasing my professional achievements and certifications.
+- img "AWS Certified Cloud Practitioner Badge"
+- heading "AWS Certified Cloud Practitioner" [level=3]
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-certified-cloud-practitioner
+- 'img "AWS Cloud Quest: Networking - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Networking - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-networking-training-badge
+- 'img "AWS Cloud Quest: Data Analytics - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Data Analytics - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-data-analytics-training-badge
+- 'img "AWS Cloud Quest: Generative AI Architect - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Generative AI Architect - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-generative-ai-architect-training-ba
+- 'img "AWS Cloud Quest: Generalist AI Practitioner - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Generalist AI Practitioner - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-generalist-ai-practitioner-training
+- 'img "AWS Cloud Quest: Machine Learning - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Machine Learning - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-machine-learning-training-badge
+- 'img "AWS Cloud Quest: Solutions Architect - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Solutions Architect - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-solutions-architect-training-badge
+- 'img "AWS Cloud Quest: Security - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Security - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-security-training-badge
+- 'img "AWS Cloud Quest: Serverless Developer - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Serverless Developer - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-serverless-developer-training-badge
+- 'img "AWS Cloud Quest: Cloud Practitioner - Training Badge Badge"'
+- 'heading "AWS Cloud Quest: Cloud Practitioner - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-cloud-quest-cloud-practitioner-training-badge
+- 'img "AWS Partner: Technical Accredited - Training Badge Badge"'
+- 'heading "AWS Partner: Technical Accredited - Training Badge" [level=3]'
+- paragraph: Issued by Amazon Web Services Training and Certification
+- link "View Credential":
+  - /url: https://www.credly.com/org/amazon-web-services/badge/aws-partner-technical-accredited-training-badge
+- contentinfo:
+  - link "GitHub profile":
+    - /url: https://github.com/cretara
+    - img "GitHub"
+  - link "LinkedIn profile":
+    - /url: https://www.linkedin.com/in/pier-daniele-cretara
+    - img "LinkedIn"
+  - link "X profile":
+    - /url: https://x.com/cretaradev
+    - img "X"
+- alert
+```
+
+# Test source
+
+```ts
+  1  | import { expect, Page } from "@playwright/test";
+  2  | 
+  3  | export class BasePage {
+  4  |   constructor(protected readonly page: Page) {}
+  5  | 
+  6  |   async goto(path = "/") {
+  7  |     await this.page.goto(path);
+  8  |   }
+  9  | 
+  10 |   async waitForAppReady() {
+  11 |     await expect(this.page.locator("#mainCretaraDev")).toBeVisible();
+> 12 |     await expect(this.page.locator("header")).toBeVisible();
+     |                                              ^ Error: expect(locator).toBeVisible() failed
+  13 |   }
+  14 | 
+  15 |   async expectSectionVisible(sectionId: string) {
+  16 |     await expect(this.page.locator(`#${sectionId}`)).toBeVisible();
+  17 |   }
+  18 | 
+  19 |   async scrollToSection(sectionId: string) {
+  20 |     await this.page.locator(`#${sectionId}`).scrollIntoViewIfNeeded();
+  21 |   }
+  22 | }
+  23 | 
+```
