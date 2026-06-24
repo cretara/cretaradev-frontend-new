@@ -12,6 +12,10 @@ const Skills = () => {
   );
   const rafIds = useRef<Record<string, number>>({});
 
+  const toTestId = useCallback((value: string) => {
+    return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }, []);
+
   const animateSkill = useCallback(
     (id: string, target: number, duration = 1200, startDelay = 0) => {
       const startTime = performance.now() + startDelay;
@@ -68,7 +72,6 @@ const Skills = () => {
   }, []);
 
   // Animate values using requestAnimationFrame for smooth increments
-  /* eslint-disable-next-line react-hooks/exhaustive-deps */
   useEffect(() => {
     if (!isVisible) return;
 
@@ -89,14 +92,14 @@ const Skills = () => {
       Object.values(rafIds.current).forEach((id) => cancelAnimationFrame(id));
       rafIds.current = {};
     };
-  }, [isVisible]);
+  }, [isVisible, animateSkill]);
 
   return (
     <section id="skills" ref={sectionRef} className="py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
+            <div className="mx-auto mb-12 max-w-127.5 text-center lg:mb-20">
               <span className="mb-2 block text-lg font-semibold text-black dark:text-white">
                 Technical Expertise
               </span>
@@ -115,6 +118,7 @@ const Skills = () => {
           {skillCategories.map((category) => (
             <div key={category.title} className="w-full px-4 md:w-1/2 lg:w-1/2">
               <div
+                data-testid={`skill-category-${toTestId(category.title)}`}
                 className="wow fadeInUp mb-10 rounded-md bg-white p-8 shadow-two duration-300 hover:shadow-one dark:bg-gray-800 dark:shadow-three dark:hover:shadow-gray-dark lg:px-5 xl:px-8"
                 data-wow-delay=".1s"
               >
@@ -140,6 +144,7 @@ const Skills = () => {
                         {/* progress bar container with native progress element for accessibility and a decorative animated div for visuals */}
                         <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
                           <progress
+                            data-testid={`skill-progress-${toTestId(skill.name)}`}
                             className="sr-only"
                             value={Math.round(current)}
                             max={100}

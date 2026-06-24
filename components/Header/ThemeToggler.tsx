@@ -44,6 +44,7 @@ const ThemeToggler = () => {
   return (
     <button
       onClick={toggleTheme}
+      data-testid="theme-toggle"
       className="
         bg-gray-100
         hover:bg-gray-200
