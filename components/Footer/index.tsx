@@ -15,6 +15,7 @@ const Footer = () => {
                 <div className="mt-8 flex items-center justify-center gap-4">
                   <Link
                     href="https://github.com/cretara"
+                    data-testid="social-link-github"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub profile"
@@ -30,6 +31,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     href="https://www.linkedin.com/in/pier-daniele-cretara"
+                    data-testid="social-link-linkedin"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn profile"
@@ -45,6 +47,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     href="https://x.com/cretaradev"
+                    data-testid="social-link-x"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="X profile"

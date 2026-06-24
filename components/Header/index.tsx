@@ -92,6 +92,7 @@ const Header = () => {
                       {menuItem.path ? (
                         <Link 
                           href={menuItem.path}
+                          data-testid={`nav-link-${menuItem.title.toLowerCase().replace(/\s+/g, "-")}`}
                           className={`w-full block text-center py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:block lg:py-6 lg:px-0`}
                         >
                           {menuItem.title}
@@ -116,6 +117,7 @@ const Header = () => {
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
+                  data-testid="navbar-toggle"
                   aria-label="Mobile Menu"
                   className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-1.5 ring-primary focus:ring-2 lg:hidden cursor-pointer"
                 >
@@ -137,6 +139,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
+                  data-testid="navbar-menu"
                   className={`navbar absolute right-0 z-30 rounded border border-gray-200 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-gray-800 lg:visible lg:static lg:w-full lg:border-none lg:bg-transparent! lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visible top-full opacity-100"
@@ -152,6 +155,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            data-testid={`mobile-nav-link-${menuItem.title.toLowerCase().replace(/\s+/g, "-")}`}
                             className={`w-full block text-center py-2 text-base text-gray-900 group-hover:text-primary dark:text-white lg:block lg:py-6 lg:px-0`}
                           >
                             {menuItem.title}

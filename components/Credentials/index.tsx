@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { Credential } from "@/types/credential";
+import Image from "next/image";
+
+const toTestId = (value: string) =>
+  value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const Credentials = () => {
   const cretaraCredentials: Credential[] = [
@@ -73,16 +77,18 @@ const Credentials = () => {
   return (
     <section
       id="credentials"
+      data-testid="credentials-section"
       className="bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28 text-white dark:text-black"
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold mb-3text-gray-900 animate-fade-in-up text-black dark:text-white">Credentials</h2>
-        <p className="text-xl text-indigo-600 mb-12 max-w-3xl mx-auto tracking-wider text-black dark:text-white">Showcasing my professional achievements and certifications.</p>
+        <p className="text-xl text-indigo-600 mb-12 max-w-3xl mx-auto tracking-wider dark:text-white">Showcasing my professional achievements and certifications.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           
           {cretaraCredentials.map((credential, index) => (
             <div 
               key={credential.linkHref} 
+              data-testid={`credential-card-${index + 1}`}
               className="bg-white p-8 rounded-xl shadow-2xl transition duration-500 transform hover:scale-[1.03] hover:shadow-indigo-300/50 border border-gray-100 flex flex-col items-center text-center group relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }} // Staggered appearance effect
             >
@@ -90,7 +96,7 @@ const Credentials = () => {
                 <div className="absolute inset-0 bg-indigo-50/50 opacity-0 group-hover:opacity-10 transition duration-300 pointer-events-none"></div>
 
                 {/* Placeholder for the actual badge image (Replicating Credly's look) */}
-                <img
+                <Image
                     src={credential.iconSrc}
                     alt={`${credential.title} Badge`}
                     className="w-32 h-auto mb-6 object-contain group-hover:scale-[1.02] transition duration-500"
@@ -100,6 +106,7 @@ const Credentials = () => {
                 <div className="w-full flex justify-center relative z-10 pt-2 text-black">
                     <Link
                         href={credential.linkHref}
+                      data-testid={`credential-link-${toTestId(credential.title)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-2 border border-indigo-300 text-sm font-medium rounded-full shadow-md text-black dark:text-white dark:bg-white hover:bg-indigo-50 transition duration-150"

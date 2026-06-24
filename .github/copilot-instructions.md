@@ -35,6 +35,10 @@
 - `next.config.js` allows remote HTTPS images broadly, which is required because the credentials section renders external badge images from Credly.
 - `components/Portfolio` and `components/Contact` exist, but they are not mounted by `components/Body/index.tsx`. Changes there will not affect the homepage unless `Body` is updated too.
 - Vercel Analytics is already present in `app/layout.tsx`, and `app/page.tsx` also mounts it. Avoid adding more analytics mounts without checking for duplication first.
+
+## Terminal usage
+CRITICAL: never use Powershell terminal for npm, USE natural base Windows terminal and run npm commands from there. This will ensure better compatibility and performance when working with the project.
+
 <!-- rtk-instructions v2 -->
 # RTK — Token-Optimized CLI
 
