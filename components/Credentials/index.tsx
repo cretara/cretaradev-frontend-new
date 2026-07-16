@@ -99,6 +99,8 @@ const Credentials = () => {
                 <Image
                     src={credential.iconSrc}
                     alt={`${credential.title} Badge`}
+                    width={128}
+                    height={128}
                     className="w-32 h-auto mb-6 object-contain group-hover:scale-[1.02] transition duration-500"
                 />
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">{credential.title}</h3>

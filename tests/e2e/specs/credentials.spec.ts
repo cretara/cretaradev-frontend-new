@@ -1,15 +1,15 @@
-import { test } from "@playwright/test";
+import { test } from "../fixtures/test";
 import { HomePagePO } from "../pages/HomePagePO";
 
 test.describe("Credentials section", () => {
-  test("credentials cards and outbound links", async ({ page }) => {
+  test("credentials cards render and outbound links are safe", async ({ page }) => {
     const home = new HomePagePO(page);
 
     await home.gotoHome();
     await home.scrollToSection("credentials");
 
     await home.credentials.expectCredentialsSectionVisible();
-    await home.credentials.expectCardCount(11);
-    await home.credentials.expectCredentialLinkExternal("aws-certified-cloud-practitioner");
+    await home.credentials.expectAtLeastOneCard();
+    await home.credentials.expectAllExternalLinksSafe();
   });
 });

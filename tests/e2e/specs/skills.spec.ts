@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { test } from "../fixtures/test";
 import { HomePagePO } from "../pages/HomePagePO";
 
 test.describe("Skills section", () => {

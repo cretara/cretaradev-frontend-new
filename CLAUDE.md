@@ -56,3 +56,4 @@ Next.js App Router portfolio site for `cretara.dev`. React 19, TypeScript, `next
 - `playwright.config.ts` auto-starts the dev server (`webServer`) on `127.0.0.1:3000`; override base URL with `PLAYWRIGHT_BASE_URL`.
 - Coverage checklist: `docs/e2e-coverage-checklist.md`.
 - CI workflow `.github/workflows/e2e-pr.yml` (on `pull_request` + `workflow_dispatch`): install → install Chromium → lint → build → e2e. Artifacts: `playwright-report` always, `test-results` on failure.
+/pl

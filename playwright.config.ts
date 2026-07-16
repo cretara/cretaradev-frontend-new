@@ -37,10 +37,12 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: "npm run dev -- --hostname 127.0.0.1 --port 3000",
+    // Production build avoids the Tailwind v4 dev-mode JIT resolve race that
+    // flakes under parallel worker cold-start. CSS is compiled once at build.
+    command: "npm run build && npm run start -- --hostname 127.0.0.1 --port 3000",
     url: baseURL,
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 240_000,
   },
   outputDir: "test-results",
 });
